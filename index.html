@@ -5,24 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>对赌：信息不足时如何做出高明决策 · 读书蒸馏</title>
 <!--
-  sansheng-distill 页面骨架(静态层 · v3 浏览型:5 板块 · 读者逻辑链)
-  用法: 复制本文件 -> 替换 thinking-in-bets / 对赌：信息不足时如何做出高明决策 / 安妮·杜克 -> 逐槽位(SLOT:*)填真实内容 -> 删 dummy/占位
-  五 tab(顺序固定): 全书速览 panel-glance / 逐章精读 panel-full / 批判与评价 panel-judge / 行动清单 panel-action / 延伸阅读 panel-extend
-  头部两层: header.cb-banner(纸底+森林绿粗色带 + .cb-intro 封面简介 + .cb-author-link 醒目作者入口胶囊) + section.hero(标语 .hero>h1 字阶 T0<=48px);导读条 .reading-guide 已废,导航唯一入口 = sticky nav.tabs
-    (1) glance: .bd-napkin 餐巾纸四件套(.formula + .formula-read 读法 + one_liner) -> .napkin-sketch 因果骨架草图(内联 SVG,可降级) -> .bd-mindmap-wrap 脑图 -> .bd-coreideas 核心观点卡(展开态必渲 .ci-explain/.ci-evidence/.ci-evlevel) -> .soul-block 两种养法对照 -> .next-cta
-    (2) full:   .concept-chips 概念筹码条 -> .chapter-toc 目录态(默认收起!) -> .bd-chapters>.bd-chapter#ch-N 手风琴多开 -> .quote-wall 金句墙(全书金句唯一归宿) -> .next-cta
+  sansheng-distill 页面骨架（静态层 · v3 浏览型：5 板块 · 读者逻辑链）
+  用法： 复制本文件 -> 替换 thinking-in-bets / 对赌：信息不足时如何做出高明决策 / 安妮·杜克 -> 逐槽位（SLOT:*）填真实内容 -> 删 dummy/占位
+  五 tab（顺序固定）： 全书速览 panel-glance / 逐章精读 panel-full / 批判与评价 panel-judge / 行动清单 panel-action / 延伸阅读 panel-extend
+  头部两层： header.cb-banner（纸底+森林绿粗色带 + .cb-intro 封面简介 + .cb-author-link 醒目作者入口胶囊） + section.hero（标语 .hero>h1 字阶 T0<=48px)；导读条 .reading-guide 已废，导航唯一入口 = sticky nav.tabs
+    (1) glance: .bd-napkin 餐巾纸四件套（.formula + .formula-read 读法 + one_liner) -> .napkin-sketch 因果骨架草图（内联 SVG，可降级） -> .bd-mindmap-wrap 脑图 -> .bd-coreideas 核心观点卡（展开态必渲 .ci-explain/.ci-evidence/.ci-evlevel) -> .soul-block 两种养法对照 -> .next-cta
+    (2) full:   .concept-chips 概念筹码条 -> .chapter-toc 目录态（默认收起！) -> .bd-chapters>.bd-chapter#ch-N 手风琴多开 -> .quote-wall 金句墙（全书金句唯一归宿） -> .next-cta
     (3) judge:  .verdict-bar 裁决条 -> .arg-restate 立论复述 -> .tensions 内在张力 -> .crit-quad 批判四区 -> .reviews 书评 -> .views-entry 观点对照入口 -> .next-cta
-    (4) action: .chain 五环路线图(.chain-detail 全可见 + .chain-loop 回环) -> .rules 情境决策卡(.rule-chips 筛选 + .rule-card) -> .models 模型抽屉卡(.model-drawer 含 boundary) -> .questions 自检 -> .next-cta
-    (5) extend: .similar 同类书 -> .reading-path 阅读路径 -> .author-shelf 作者书架 -> .cross-domain 跨域命名(v4) -> .crossbook 跨书回声 -> .takeaway-strip 离开前带走(v4,出口骨架复现) -> .extend-pointer 末行指路(⑤ 无 next-cta)
-  页内子视图(2 张,</main> 前 · panel 外 · hidden 默认): #sub-author(au-* infobox 归一栏 + 五栏)/ #sub-views(观点对照 + .vt-focus 争议焦点);返回件墨色胶囊 .sub-back + .subpage-from 归属语境
-  契约: token 名与 7 主题取值见 references/brand-tokens.md;区块/签名 class 规范见 references/html-spec.md(CSS/HTML/JS 三处同名,勿漂移)
-  注意: 脑图为自绘 SVG 深色版(v4.1,无 vendor 依赖):</main> 后交互 <script> 内 initMindmap() 读内嵌 #bd-mindmap-data 的 nodeData -> tidy-tree 布局 + SVG 挂线 + viewBox viewer,勿删勿改
-  v3 铁律: 目录态默认收起(非 v2 全展开)/ 金句只在 .quote-wall 出现一次 / 核心观点展开态必渲三件 / Zero Hex(组件只用 var(--*))
+    (4) action: .chain 五环路线图（.chain-detail 全可见 + .chain-loop 回环） -> .rules 情境决策卡（.rule-chips 筛选 + .rule-card) -> .models 模型抽屉卡（.model-drawer 含 boundary) -> .questions 自检 -> .next-cta
+    (5) extend: .similar 同类书 -> .reading-path 阅读路径 -> .author-shelf 作者书架 -> .cross-domain 跨域命名（v4) -> .crossbook 跨书回声 -> .takeaway-strip 离开前带走（v4，出口骨架复现） -> .extend-pointer 末行指路（⑤ 无 next-cta)
+  页内子视图（2 张，</main> 前 · panel 外 · hidden 默认）： #sub-author(au-* infobox 归一栏 + 五栏）/ #sub-views（观点对照 + .vt-focus 争议焦点）；返回件墨色胶囊 .sub-back + .subpage-from 归属语境
+  契约： token 名与 7 主题取值见 references/brand-tokens.md；区块/签名 class 规范见 references/html-spec.md(CSS/HTML/JS 三处同名，勿漂移）
+  注意： 脑图为自绘 SVG 深色版（v4.1，无 vendor 依赖）：</main> 后交互 <script> 内 initMindmap() 读内嵌 #bd-mindmap-data 的 nodeData -> tidy-tree 布局 + SVG 挂线 + viewBox viewer，勿删勿改
+  v3 铁律： 目录态默认收起（非 v2 全展开）/ 金句只在 .quote-wall 出现一次 / 核心观点展开态必渲三件 / Zero Hex（组件只用 var(--*))
 -->
 <style>
-/* ===== TOKENS:7 主题(:root=warm-paper 默认 + 6 个 body[data-theme] 覆盖块) =====
-   规则: hex 只许出现在下面这 7 个 token 块内;组件样式一律 var(--*)(Zero Hex Colors, verify_page.py 强拦)
-   token 块内只放声明,不得嵌套 {},注释里不得出现右花括号 */
+/* ===== TOKENS:7 主题（:root=warm-paper 默认 + 6 个 body[data-theme] 覆盖块） =====
+   规则： hex 只许出现在下面这 7 个 token 块内；组件样式一律 var(--*)(Zero Hex Colors, verify_page.py 强拦）
+   token 块内只放声明，不得嵌套 {}，注释里不得出现右花括号 */
 :root{
   --ink:#171411;
   --muted:#6d6258;
@@ -31,8 +31,8 @@
   --line:#d8c8af;
   --red:#b9422f;
   --blue:#245f73;
-  --green:#177A5C;   /* 品牌对齐: 原 #4d6f48, 见 brand-tokens.md §3 */
-  --gold:#B8892F;    /* 品牌对齐: 原 #c2872d */
+  --green:#177A5C;   /* 品牌对齐： 原 #4d6f48, 见 brand-tokens.md §3 */
+  --gold:#B8892F;    /* 品牌对齐： 原 #c2872d */
   --white:#fffaf0;
   --surface:rgba(255,250,240,.62);
   --surface-strong:rgba(255,250,240,.72);
@@ -46,7 +46,7 @@
   --tint-accent-strong:rgba(184,137,47,.15);
   --ink-soft:#3d332b;
   --ink-soft-2:#44392f;
-  /* 脑图深色画布 dark token(自绘 SVG 脑图专用,主题无关恒深墨绿;SVG 生成器经 getComputedStyle 读同一套 -> 零 hex 单一来源,勿散写进组件) */
+  /* 脑图深色画布 dark token（自绘 SVG 脑图专用，主题无关恒深墨绿；SVG 生成器经 getComputedStyle 读同一套 -> 零 hex 单一来源，勿散写进组件） */
   --mm-bg:#14332e; --mm-bg2:#1a423b; --mm-panel:#173a34;
   --mm-root-fill:#235c4f; --mm-root-bd:#3c8272; --mm-root-tx:#f4efe4;
   --mm-ink:#f2ede1; --mm-ink2:#dfe8e0; --mm-ink3:#bccfc4;
@@ -117,7 +117,7 @@ body[data-theme="brand-dark"]{
   --bg:radial-gradient(1200px 800px at 20% -10%, rgba(14,159,110,.12), transparent 60%), #05080D;
 }
 
-/* ===== 主题专属组件微调(零 hex,只许 var 与 content) ===== */
+/* ===== 主题专属组件微调（零 hex，只许 var 与 content) ===== */
 body[data-theme="minimal"] .verdict-bar{border-left-color:var(--ink)}
 body[data-theme="minimal"] .arg-restate{border-left-color:var(--ink)}
 body[data-theme="ink-wash"] .qw-card{border-left-color:var(--red)}
@@ -131,14 +131,14 @@ a{color:var(--blue)}
 [hidden]{display:none!important}
 main{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:0 0 60px;isolation:isolate}
 
-/* ===== 6 级字阶(T0-T5,section 2.3.2;组件标题只取梯内值) =====
+/* ===== 6 级字阶（T0-T5,section 2.3.2；组件标题只取梯内值） =====
    T0 hero<=48 / T1 书名36 / T2 板块题26 / T3 章题·子页题22 / T4 卡片题18 / T5 标签13 */
 .section-title,.zone-title{margin:0 0 16px;font:900 1.625rem/1.25 var(--font-display);color:var(--ink)}   /* T2 26px */
 .section-lead{margin:0 0 22px;color:var(--ink-soft);font-size:1.0625rem;line-height:1.8}
 .block-lead{margin:26px 0 12px;color:var(--ink-soft);font-size:1.0625rem;line-height:1.75}
 .eyebrow{margin:0 0 12px;color:var(--red);font:700 .8125rem/1.3 var(--font-display);letter-spacing:.1em}   /* T5 */
 
-/* ===== 头部层1: .cb-banner 纸底 + 森林绿粗色带刊头(section 2.3.1) ===== */
+/* ===== 头部层1: .cb-banner 纸底 + 森林绿粗色带刊头（section 2.3.1) ===== */
 .cb-banner{display:grid;grid-template-columns:300px 1fr;margin:18px 0 8px;border:0;border-left:6px solid var(--green);border-radius:6px;background:linear-gradient(135deg,var(--paper),var(--paper-deep));box-shadow:var(--shadow);position:relative;overflow:hidden}
 .cb-banner::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:linear-gradient(90deg,var(--gold),transparent 72%)}
 .cb-banner img.cb-cover{width:100%;height:100%;max-height:420px;object-fit:contain;padding:32px 8px 32px 32px;filter:drop-shadow(0 14px 26px rgba(0,0,0,.20)) drop-shadow(0 1px 1px rgba(0,0,0,.26))}   /* 双投影=书封落纸阴影 + 轻边定义 */
@@ -154,7 +154,7 @@ main{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:0 0 60px;isolatio
 .cb-banner .cb-intro{margin:0;max-width:40em;color:var(--ink-soft);font-size:1.0625rem;line-height:1.9}
 .cb-banner .cb-intro strong{color:var(--ink);font-weight:700;border-bottom:2px solid var(--gold)}
 
-/* ===== 头部层间: .author-entry 演变入口卡(banner→hero 之间;作者 ≥2 部已蒸才渲染,否则整卡删) ===== */
+/* ===== 头部层间： .author-entry 演变入口卡（banner→hero 之间；作者 ≥2 部已蒸才渲染，否则整卡删） ===== */
 .author-entry{display:flex;align-items:center;flex-wrap:wrap;gap:9px 14px;margin:14px 0 4px;padding:12px 18px;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:8px;background:var(--surface-strong);color:var(--ink-soft);text-decoration:none;transition:border-color .18s ease,transform .18s ease}
 .author-entry:hover{border-color:var(--gold);transform:translateX(3px)}
 .author-entry .ae-badge{flex:0 0 auto;padding:3px 11px;border:1.5px solid var(--gold);border-radius:999px;background:var(--tint-accent);color:var(--ink-soft);font:700 .75rem/1.3 var(--font-display);letter-spacing:.08em}
@@ -162,7 +162,7 @@ main{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:0 0 60px;isolatio
 .author-entry .ae-text b{color:var(--ink);font-weight:800}
 .author-entry .ae-go{flex:0 0 auto;color:var(--blue);font:800 .875rem/1.3 var(--font-display);white-space:nowrap}
 
-/* ===== 头部层间: .topic-entry 主题聚合入口卡(banner→hero 之间;同主题 ≥3 部已蒸才渲染,否则整卡删;绿边条区分 author 金边条) ===== */
+/* ===== 头部层间： .topic-entry 主题聚合入口卡（banner→hero 之间；同主题 ≥3 部已蒸才渲染，否则整卡删；绿边条区分 author 金边条） ===== */
 .topic-entry{display:flex;align-items:center;flex-wrap:wrap;gap:9px 14px;margin:14px 0 4px;padding:12px 18px;border:1px solid var(--line);border-left:4px solid var(--green);border-radius:8px;background:var(--surface-strong);color:var(--ink-soft);text-decoration:none;transition:border-color .18s ease,transform .18s ease}
 .topic-entry:hover{border-color:var(--green);transform:translateX(3px)}
 .topic-entry .te-badge{flex:0 0 auto;padding:3px 11px;border:1.5px solid var(--green);border-radius:999px;background:var(--tint-accent);color:var(--ink-soft);font:700 .75rem/1.3 var(--font-display);letter-spacing:.08em}
@@ -170,11 +170,11 @@ main{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:0 0 60px;isolatio
 .topic-entry .te-text b{color:var(--ink);font-weight:800}
 .topic-entry .te-go{flex:0 0 auto;color:var(--blue);font:800 .875rem/1.3 var(--font-display);white-space:nowrap}
 
-/* ===== 头部层3: .hero 标语(降级 T0) ===== */
+/* ===== 头部层3: .hero 标语（降级 T0) ===== */
 .hero{padding:30px 0 18px}
 .hero h1{margin:0;max-width:920px;font:900 clamp(2.25rem,4vw,3rem)/1.15 var(--font-display);letter-spacing:.005em}   /* T0 36-48px */
 
-/* ===== Tabs / Panels(激活态类名 = on) ===== */
+/* ===== Tabs / Panels（激活态类名 = on) ===== */
 .tabs{position:sticky;top:0;z-index:50;display:grid;gap:8px;padding:10px;margin:20px 0 28px;border:1px solid var(--line);background:var(--bar-bg);grid-template-columns:repeat(5,1fr)}
 .tab{min-height:56px;border:0;border-radius:4px;background:transparent;cursor:pointer;font:800 1rem/1.2 var(--font-display);padding:6px 6px}
 .tab .tab-sub{display:block;margin-top:3px;font:600 .75rem/1.2 var(--font-display);color:var(--muted)}
@@ -184,7 +184,7 @@ main{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:0 0 60px;isolatio
 .panel.on{display:block}
 @keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
 
-/* ===== 板尾 .next-cta(每板底一枚,指向下一板) ===== */
+/* ===== 板尾 .next-cta（每板底一枚，指向下一板） ===== */
 .next-cta{display:flex;align-items:center;justify-content:center;gap:8px;margin:34px 0 6px;padding:18px 22px;border:0;border-radius:6px;background:var(--green);color:var(--paper);cursor:pointer;font:800 1.0625rem/1.3 var(--font-display);text-decoration:none;width:100%;transition:transform .2s}
 .next-cta:hover{transform:translateY(-2px)}
 
@@ -193,18 +193,18 @@ main{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:0 0 60px;isolatio
 .bd-napkin{border-top:3px solid var(--gold)}
 .bd-napkin h3{margin:0 0 10px;font:800 1.125rem/1.3 var(--font-display)}   /* T4 */
 .bd-napkin .formula{margin:6px 0 8px;color:var(--green);font:900 1.625rem/1.4 var(--font-display)}
-/* 公式读法 .formula-read(v4,Q4-1:.formula 正下方,小一号,前缀「怎么读:」,点明运算符语义) */
+/* 公式读法 .formula-read(v4,Q4-1:.formula 正下方，小一号，前缀「怎么读：」，点明运算符语义） */
 .bd-napkin .formula-read{margin:0 0 14px;color:var(--ink-soft);font-size:.9375rem;line-height:1.7}
-.bd-napkin .formula-read::before{content:"怎么读:";margin-right:2px;color:var(--green);font-weight:700}
+.bd-napkin .formula-read::before{content:"怎么读：";margin-right:2px;color:var(--green);font-weight:700}
 .bd-napkin p:not(.formula):not(.formula-read){margin:0;color:var(--ink-soft-2);font-size:1.0625rem;line-height:1.75}
 
-/* ===== (1) 因果骨架草图 .napkin-sketch(v4,Q4-2:内联 SVG 纵向因果流,直角经典/浅色/静态一屏;
-   餐巾纸后、脑图前;色只走 token -- --paper 底 / --green 引线与描边 / --ink 文字 / 中间产物 --gold 描边) ===== */
+/* ===== (1) 因果骨架草图 .napkin-sketch(v4,Q4-2：内联 SVG 纵向因果流，直角经典/浅色/静态一屏；
+   餐巾纸后、脑图前；色只走 token -- --paper 底 / --green 引线与描边 / --ink 文字 / 中间产物 --gold 描边） ===== */
 .napkin-sketch{margin:6px 0 22px;padding:14px 12px 8px;border:1px solid var(--line);border-radius:8px;background:var(--paper)}
 .napkin-sketch .sk-caption{margin:0 0 8px;color:var(--ink-soft);font:700 .8125rem/1.5 var(--font-display);letter-spacing:.02em;text-align:center}
 .napkin-sketch .sk-caption b{color:var(--green)}
 .napkin-sketch svg{display:block;width:100%;height:auto;max-height:70vh;margin:0 auto}
-/* 二阶实底(sandy:中间产物 + 终点统一绿实底白字 / 支柱·过程=浅底描边) */
+/* 二阶实底（sandy：中间产物 + 终点统一绿实底白字 / 支柱·过程=浅底描边） */
 .napkin-sketch .sk-node{fill:var(--surface-strong);stroke:var(--green);stroke-width:1.4}
 .napkin-sketch .sk-node.sk-mid{fill:var(--green);stroke:none}
 .napkin-sketch .sk-node.sk-end{fill:var(--green);stroke:none}
@@ -212,14 +212,14 @@ main{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:0 0 60px;isolatio
 .napkin-sketch .sk-label.sk-tmid,.napkin-sketch .sk-label.sk-tend{fill:var(--white)}
 .napkin-sketch .sk-line{fill:none;stroke:var(--green);stroke-width:1.4;stroke-opacity:.45;shape-rendering:crispEdges}
 .napkin-sketch .sk-arrow{fill:var(--green)}
-/* 转换标签:纯文字挪到引线上方(不套框、不压箭头) */
+/* 转换标签：纯文字挪到引线上方（不套框、不压箭头） */
 .napkin-sketch .sk-elabel{fill:var(--green);font-family:var(--font-display);font-weight:700;font-size:11px}
 
-/* ===== (1) 脑图 .bd-mindmap-wrap(v4.1 自绘 SVG 深色版:tidy-tree 确定性布局 + viewBox 缩放 viewer;
-   深墨绿圆角画布嵌浅色纸页,上下留白过渡不生硬贴边;配色全走 --mm-* dark token(零 hex);
-   SVG 生成器读内嵌 nodeData 通用出图,只画父子直角引线、不画任何关联箭头/收纳虚线) ===== */
+/* ===== (1) 脑图 .bd-mindmap-wrap(v4.1 自绘 SVG 深色版：tidy-tree 确定性布局 + viewBox 缩放 viewer;
+   深墨绿圆角画布嵌浅色纸页，上下留白过渡不生硬贴边；配色全走 --mm-* dark token（零 hex);
+   SVG 生成器读内嵌 nodeData 通用出图，只画父子直角引线、不画任何关联箭头/收纳虚线） ===== */
 .bd-mindmap-wrap{position:relative;margin:26px 0 22px}
-/* 深色画布 = viewBox viewer 视口:点阵磨砂纹 + 极缓径向渐变,圆角、软投影(留白过渡),拖动手势、不选中 */
+/* 深色画布 = viewBox viewer 视口：点阵磨砂纹 + 极缓径向渐变，圆角、软投影（留白过渡），拖动手势、不选中 */
 .bd-mindmap-wrap #bd-mindmap{position:relative;display:block;width:100%;height:clamp(460px,64vh,680px);
   border-radius:16px;overflow:hidden;cursor:grab;touch-action:none;-webkit-user-select:none;user-select:none;
   box-shadow:0 16px 44px rgba(9,26,22,.30),0 0 0 1px rgba(120,150,140,.16);
@@ -231,7 +231,7 @@ main{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:0 0 60px;isolatio
 .bd-mindmap-wrap #bd-mindmap .mm-stage svg{display:block}
 .bd-mindmap-wrap #bd-mindmap a.jump{cursor:pointer}
 .bd-mindmap-wrap #bd-mindmap a{-webkit-user-drag:none;user-drag:none}
-/* 工具栏(缩小/放大/复位/全屏),浮在深色画布右上 */
+/* 工具栏（缩小/放大/复位/全屏），浮在深色画布右上 */
 .bd-mindmap-wrap .mm-toolbar{position:absolute;top:16px;right:16px;z-index:6;display:flex;gap:8px}
 .bd-mindmap-wrap .mm-toolbar button{font:inherit;font-size:13px;line-height:1;cursor:pointer;
   background:rgba(255,255,255,.05);color:var(--mm-ink);border:1px solid var(--mm-border);border-radius:6px;
@@ -239,7 +239,7 @@ main{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:0 0 60px;isolatio
 .bd-mindmap-wrap .mm-toolbar button:hover{background:rgba(255,255,255,.12);border-color:rgba(160,190,180,.42)}
 .bd-mindmap-wrap .mm-toolbar button.mm-fs{background:var(--mm-accent);color:var(--mm-accent-tx);border-color:var(--mm-root-bd)}
 .bd-mindmap-wrap .mm-toolbar button.mm-fs:hover{background:var(--mm-root-fill)}
-/* 交互提示 / 跳章 toast / 缩放徽标(全浮在深色画布内) */
+/* 交互提示 / 跳章 toast / 缩放徽标（全浮在深色画布内） */
 .bd-mindmap-wrap .mm-hint{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:7;
   background:rgba(9,26,22,.9);color:var(--mm-ink);font:12.5px/1.4 var(--font-display);padding:9px 15px;
   border-radius:20px;pointer-events:none;border:1px solid var(--mm-border);box-shadow:0 4px 18px rgba(0,0,0,.4);
@@ -252,9 +252,9 @@ main{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:0 0 60px;isolatio
 .bd-mindmap-wrap .mm-zoom{position:absolute;right:16px;bottom:16px;z-index:6;background:rgba(9,26,22,.72);
   border:1px solid var(--mm-border);color:var(--mm-ink2);font:12px/1 var(--font-display);padding:5px 10px;border-radius:6px;
   font-variant-numeric:tabular-nums;pointer-events:none}
-/* 画布下方一行引导(留在纸底浅色页,故用页面 token) */
+/* 画布下方一行引导（留在纸底浅色页，故用页面 token) */
 .bd-mindmap-wrap .mm-caption{margin:12px 4px 2px;color:var(--muted);font:12px/1.6 var(--font-display)}
-/* 全屏聚焦态:纯深色铺满视口(JS 会把 wrap 临时移到 <body> 顶层,逃离 main/panel 祖先 stacking context;z 高于 nav/主题浮层) */
+/* 全屏聚焦态：纯深色铺满视口（JS 会把 wrap 临时移到 <body> 顶层，逃离 main/panel 祖先 stacking context;z 高于 nav/主题浮层） */
 .bd-mindmap-wrap.mm-fullscreen{position:fixed;inset:0;z-index:9999;margin:0;padding:0;background:var(--mm-bg)}
 .bd-mindmap-wrap.mm-fullscreen #bd-mindmap{height:100%;border-radius:0;box-shadow:none}
 .bd-mindmap-wrap.mm-fullscreen .mm-caption{display:none}
@@ -263,7 +263,7 @@ main{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:0 0 60px;isolatio
   .bd-mindmap-wrap .mm-toolbar button{padding:8px 10px}
 }
 
-/* ===== (1) 核心观点卡 .bd-coreideas(展开态必渲三件:explain/evidence/evlevel,T8) ===== */
+/* ===== (1) 核心观点卡 .bd-coreideas（展开态必渲三件：explain/evidence/evlevel,T8) ===== */
 .bd-coreideas{margin-top:30px}
 .ci-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:8px}
 .ci{padding:18px 20px;border:1px solid var(--line);background:var(--surface);cursor:pointer;transition:border-color .2s}
@@ -285,14 +285,14 @@ main{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:0 0 60px;isolatio
 .ci-evlevel[data-level="inferred"]::before{background:var(--gold)}     /* 结构推断 */
 .ci-evlevel[data-level="review"]::before{background:var(--red)}        /* 需复核 */
 .ci-teleport{display:inline-block;margin-top:10px;color:var(--blue);font:700 .875rem/1.3 var(--font-display);text-decoration:none}
-/* pillar 分组(v4,Q1-3):观点卡按脑图一级分支归组,组头=分支名 */
+/* pillar 分组（v4,Q1-3)：观点卡按脑图一级分支归组，组头=分支名 */
 .ci-group{margin-top:18px}
 .ci-group-head{display:flex;align-items:center;gap:10px;margin:0 0 4px;color:var(--red);font:800 1rem/1.4 var(--font-display);letter-spacing:.02em}
 .ci-group-head::before{content:"";flex:0 0 auto;width:8px;height:8px;border-radius:2px;background:var(--red);transform:rotate(45deg)}
 .ci-portal{display:inline-block;margin-top:10px;color:var(--gold);font:700 .8125rem/1.3 var(--font-display);text-decoration:none}
 .ci-portal:hover{text-decoration:underline}
 
-/* ===== (1) 两种养法对照 .soul-block(soul_module 三型择一) ===== */
+/* ===== (1) 两种养法对照 .soul-block(soul_module 三型择一） ===== */
 .soul-block{margin:30px 0 0;padding:22px 24px;border:1px solid var(--line);background:var(--surface)}
 .soul-title{margin:0 0 6px;font:900 1.375rem/1.35 var(--font-display);color:var(--ink)}   /* T3 */
 .soul-subtitle{margin:0 0 8px;color:var(--red);font:700 .9375rem/1.5 var(--font-display)}
@@ -316,17 +316,17 @@ main{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:0 0 60px;isolatio
 .sc-legend{display:flex;align-items:center;gap:8px;margin:8px 0 0;color:var(--muted);font:13px/1.4 var(--font-display)}
 .sc-legend .sc-swatch{width:14px;height:3px;background:var(--red);display:inline-block}
 
-/* ===== (2) 概念筹码条 .concept-chips(概念唯一归宿) ===== */
+/* ===== (2) 概念筹码条 .concept-chips（概念唯一归宿） ===== */
 .concept-chips{margin-bottom:28px}
 .cc-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
 .cc-chip{padding:8px 14px;border:1px solid var(--line);border-radius:999px;background:var(--surface);cursor:pointer;font:700 .9375rem/1.2 var(--font-display);color:var(--ink)}
 .cc-chip:hover{border-color:var(--gold)}
 .cc-chip.on{background:var(--green);color:var(--paper);border-color:var(--green)}
-/* 概念中英对照(视频型 Q6):英文原词跟在中文概念后,弹卡内以 --gold 斜体呈现 */
+/* 概念中英对照（视频型 Q6)：英文原词跟在中文概念后，弹卡内以 --gold 斜体呈现 */
 .cc-chip .cc-en{margin-left:6px;color:var(--muted);font:600 .8125rem/1 var(--font-body);font-style:italic}
 .cc-chip.on .cc-en{color:var(--paper)}
 .cc-pop .cc-en{margin-left:6px;color:var(--gold);font-style:italic;font-weight:700}
-/* 误读角标(v4,Q2-2):common_misread 非空的 chip 面上右上角小「≠」,提示点进去有误读纠偏 */
+/* 误读角标（v4,Q2-2):common_misread 非空的 chip 面上右上角小「≠」，提示点进去有误读纠偏 */
 .cc-chip{position:relative}
 .cc-chip.cc-has-mis::after{content:"\2260";position:absolute;top:-6px;right:-6px;width:18px;height:18px;display:grid;place-items:center;border-radius:50%;background:var(--red);color:var(--white);font:800 11px/1 var(--font-display)}
 .cc-pops{margin-top:12px}
@@ -336,7 +336,7 @@ main{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:0 0 60px;isolatio
 .cc-pop .cc-mis{margin:0 0 6px;color:var(--red);font-size:.9375rem;line-height:1.6}
 .cc-pop .cc-stance{margin:0;color:var(--ink-soft-2);font-size:.9375rem;line-height:1.6}
 
-/* ===== (2) 章目录 .chapter-toc(目录态,默认收起 + 手风琴逃生门) ===== */
+/* ===== (2) 章目录 .chapter-toc（目录态，默认收起 + 手风琴逃生门） ===== */
 .chapter-toc{margin-bottom:30px}
 .toc-head{display:flex;align-items:center;flex-wrap:wrap;gap:10px 16px;padding:14px 18px;border:1px solid var(--line);border-top:3px solid var(--ink);background:var(--surface-strong)}
 .toc-summary{font:700 1rem/1.4 var(--font-display);color:var(--ink)}
@@ -352,14 +352,14 @@ main{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:0 0 60px;isolatio
 .toc-main{flex:1 1 auto;min-width:0}
 .toc-title{font:800 1.125rem/1.35 var(--font-display);color:var(--ink)}   /* T4 */
 .toc-sum{margin:2px 0 0;color:var(--muted);font-size:.875rem;line-height:1.5}
-/* 悬念钩子(v4,Q5-5):收起行第三层,强调色短句,取该章招牌案例的具象意象 */
+/* 悬念钩子（v4,Q5-5)：收起行第三层，强调色短句，取该章招牌案例的具象意象 */
 .toc-hook{display:block;margin:4px 0 0;color:var(--gold);font:700 .8125rem/1.4 var(--font-display)}
 .toc-hook::before{content:"\2192\00a0";color:var(--gold)}
 .toc-meta{flex:0 0 auto;display:flex;align-items:center;gap:10px;color:var(--muted);font:700 .8125rem/1.3 var(--font-display)}
 .toc-arrow{transition:transform .2s}
 .toc-row.open .toc-arrow{transform:rotate(180deg)}
 
-/* ===== (2) 手风琴章节 .bd-chapters / .bd-chapter(默认收起) ===== */
+/* ===== (2) 手风琴章节 .bd-chapters / .bd-chapter（默认收起） ===== */
 .bd-chapters{margin-bottom:30px}
 .bd-chapter{margin:0 0 14px;border:1px solid var(--line);border-top:3px solid var(--red);background:var(--surface)}
 .bd-chapter:not(.open){display:none}
@@ -372,11 +372,11 @@ main{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:0 0 60px;isolatio
 .ch-act:hover{border-color:var(--gold);color:var(--ink)}
 .ch-act.ch-next{background:var(--green);color:var(--paper);border-color:var(--green)}
 
-/* ===== 出处小灰字 .src-note(随文常显,无开关) ===== */
+/* ===== 出处小灰字 .src-note（随文常显，无开关） ===== */
 .src-note{display:block;margin-top:10px;color:var(--muted);font:12px/1.5 var(--font-display);text-align:right}
 .excerpt .src-note{text-align:left;margin-top:8px}
 
-/* ===== (2) 全书金句墙 .quote-wall(金句唯一集中归宿) ===== */
+/* ===== (2) 全书金句墙 .quote-wall（金句唯一集中归宿） ===== */
 .quote-wall{margin-top:8px}
 .qw-list{display:grid;gap:14px;margin-top:12px}
 .qw-card{margin:0;padding:22px 26px;border-left:4px solid var(--gold);background:var(--surface-strong)}
@@ -385,7 +385,7 @@ main{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:0 0 60px;isolatio
 .qw-featured blockquote{font-size:1.375rem}
 .qw-card figcaption{margin-top:10px;color:var(--muted);font:13px/1.5 var(--font-display)}
 .qw-card .qw-teleport{display:inline-block;margin-top:8px;color:var(--blue);font:700 .8125rem/1.3 var(--font-display);text-decoration:none}
-/* 双语引用(视频型 Q6):中文译作可读主行,英文原话照录在 blockquote[lang=en] 作原文佐证 */
+/* 双语引用（视频型 Q6)：中文译作可读主行，英文原话照录在 blockquote[lang=en] 作原文佐证 */
 .qw-card blockquote[lang="en"]{font-style:italic;font-size:1.0625rem;color:var(--ink-soft-2)}
 .qw-card .qw-zh{margin:10px 0 0;color:var(--ink);font:600 1.1875rem/1.8 var(--font-body)}
 .qw-featured .qw-zh{font-size:1.375rem}
@@ -396,7 +396,7 @@ main{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:0 0 60px;isolatio
 .vb-score b{font:900 2.75rem/1 var(--font-display);color:var(--gold)}
 .vb-score span{margin-top:4px;color:var(--muted);font:700 .75rem/1.3 var(--font-display)}
 .vb-text{margin:0;color:var(--ink-soft);font-size:1.0625rem;line-height:1.75}
-/* 热度条(视频型 Q6:替豆瓣评分):频道订阅大数 + 系列合计播放/赞,标 as_of 快照 */
+/* 热度条（视频型 Q6：替豆瓣评分）：频道订阅大数 + 系列合计播放/赞，标 as_of 快照 */
 .verdict-bar .vb-heat{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;line-height:1}
 .verdict-bar .vb-heat b{font:900 2.25rem/1 var(--font-display);color:var(--gold)}
 .verdict-bar .vb-heat span{margin-top:4px;color:var(--muted);font:700 .75rem/1.3 var(--font-display)}
@@ -404,18 +404,18 @@ main{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:0 0 60px;isolatio
 .vb-heatline{margin:0;color:var(--ink-soft-2);font:700 .875rem/1.55 var(--font-display)}
 .vb-heatline b{color:var(--green)}
 
-/* ===== (3) 立论复述 .arg-restate(arguments.chain 唯一归宿) ===== */
+/* ===== (3) 立论复述 .arg-restate(arguments.chain 唯一归宿） ===== */
 .arg-restate{margin:0 0 26px;padding:20px 24px;border-left:5px solid var(--red);background:var(--surface-strong)}
 .arg-restate .ar-sub{margin:0 0 10px;color:var(--red);font:700 .875rem/1.3 var(--font-display)}
 .arg-restate p{margin:0;color:var(--ink-soft);font-size:1.0625rem;line-height:1.85}
-/* 论证链胶囊(v4,Q4-7):散文段之上一条横向 step 链,5 秒可扫;窄屏纵排 */
+/* 论证链胶囊（v4,Q4-7)：散文段之上一条横向 step 链，5 秒可扫；窄屏纵排 */
 .arg-steps{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:0 0 16px;padding:0;list-style:none}
 .arg-step{padding:6px 13px;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink);font:700 .875rem/1.3 var(--font-display)}
 .arg-step.arg-step-last{background:var(--green);color:var(--paper);border-color:var(--green)}
 .arg-arrow{flex:0 0 auto;color:var(--red);font:900 .9375rem/1 var(--font-display)}
 @media(max-width:560px){.arg-steps{flex-direction:column;align-items:flex-start}.arg-arrow{transform:rotate(90deg);margin-left:16px}}
 
-/* ===== (3) 内在张力 .tensions(A<->B 窄行,点开仲裁) ===== */
+/* ===== (3) 内在张力 .tensions(A<->B 窄行，点开仲裁） ===== */
 .tensions{margin-bottom:26px}
 .tn-list{display:grid;gap:10px;margin-top:12px}
 .tn-row{padding:14px 18px;border:1px solid var(--line);background:var(--surface);cursor:pointer}
@@ -425,7 +425,7 @@ main{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:0 0 60px;isolatio
 .tn-note{display:none;margin:10px 0 0;color:var(--ink-soft-2);font-size:.9375rem;line-height:1.7}
 .tn-row.open .tn-note{display:block;animation:rise .3s ease both}
 
-/* ===== (3) 批判四区 .crit-quad(2x2 四色分区,全部可见) ===== */
+/* ===== (3) 批判四区 .crit-quad(2x2 四色分区，全部可见） ===== */
 .crit-quad{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:12px;margin-bottom:26px}
 .cq-zone{padding:18px 20px;border:1px solid var(--line);border-radius:6px}
 .cq-zone .zone-title{margin:0 0 12px;font:900 1.125rem/1.3 var(--font-display);border:0;padding:0}   /* T4 内标题 */
@@ -437,7 +437,7 @@ main{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:0 0 60px;isolatio
 .cq-object{background:color-mix(in srgb,var(--red) 12%,transparent);border-left:4px solid var(--red);grid-column:1/-1}
 .cq-object .cq-strong{margin:0 0 10px;font:800 1.1875rem/1.5 var(--font-display);color:var(--ink)}
 
-/* ===== (3) 书评 .reviews(正反两列) ===== */
+/* ===== (3) 书评 .reviews（正反两列） ===== */
 .reviews{margin-bottom:26px}
 .review-cols{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:12px}
 .review-col h4{margin:0 0 10px;font:800 1rem/1.3 var(--font-display)}
@@ -456,7 +456,7 @@ main{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:0 0 60px;isolatio
 .ve-list{margin:10px 0;padding-left:20px;color:var(--ink-soft);font-size:1rem;line-height:1.8}
 .ve-go{color:var(--blue);font:700 .9375rem/1.3 var(--font-display)}
 
-/* ===== (4) 行动路线图 .chain(全可见 + .chain-detail + 回环 .chain-loop) ===== */
+/* ===== (4) 行动路线图 .chain（全可见 + .chain-detail + 回环 .chain-loop) ===== */
 .chain{position:relative;margin-top:8px}
 .chain-steps{display:grid;gap:12px}
 .chain-step{display:block;padding:16px 20px;border:1px solid var(--line);border-left:4px solid var(--line);background:var(--surface);cursor:pointer;transition:border-color .2s}
@@ -471,7 +471,7 @@ main{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:0 0 60px;isolatio
 .chain-loop svg{flex:0 0 auto}
 .chain-loop .cl-path{fill:none;stroke:var(--gold);stroke-width:2;stroke-dasharray:5 4;stroke-linecap:round}
 
-/* ===== (4) 情境决策卡 .rules(.rule-chips 筛选 + .rule-card 三行全可见) ===== */
+/* ===== (4) 情境决策卡 .rules(.rule-chips 筛选 + .rule-card 三行全可见） ===== */
 .rules{margin-top:12px}
 .rule-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
 .rc-group-label{width:100%;margin:6px 0 0;color:var(--muted);font:700 .75rem/1.3 var(--font-display);letter-spacing:.06em}
@@ -488,14 +488,14 @@ main{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:0 0 60px;isolatio
 .rc-do b{color:var(--green)}
 .rc-because b{color:var(--muted)}
 .rc-teleport{display:inline-block;margin-top:8px;color:var(--blue);font:700 .8125rem/1.3 var(--font-display);text-decoration:none}
-/* certainty 徽标(v6.1,仅 stakes=high 高后果书):复用 .ci-evlevel 色点+token 模式,Zero-Hex */
+/* certainty 徽标（v6.1，仅 stakes=high 高后果书）：复用 .ci-evlevel 色点+token 模式，Zero-Hex */
 .rc-certainty{display:inline-flex;align-items:center;gap:5px;margin:8px 12px 0 0;font:600 .75rem/1.3 var(--font-display);color:var(--ink-soft-2);vertical-align:middle}
 .rc-certainty::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--muted)}
 .rc-certainty[data-certainty="book_explicit"]::before{background:var(--green)}          /* 书里白纸黑字 */
 .rc-certainty[data-certainty="cross_book_synthesis"]::before{background:var(--gold)}    /* 跨书合成 */
 .rc-certainty[data-certainty="general_knowledge"]::before{background:var(--muted)}      /* 编者通识 */
 
-/* ===== (4) 心智模型抽屉卡 .models / .model-drawer(含 boundary) ===== */
+/* ===== (4) 心智模型抽屉卡 .models / .model-drawer（含 boundary) ===== */
 .models{margin-top:12px}
 .model-list{display:grid;gap:10px}
 .model-drawer{border:1px solid var(--line);background:var(--surface)}
@@ -512,7 +512,7 @@ main{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:0 0 60px;isolatio
 .md-seg.md-boundary .md-k{color:var(--red)}
 .md-seg p{margin:0;color:var(--ink-soft-2);font-size:.9375rem;line-height:1.75}
 
-/* ===== (4) 读完自检 .questions(followup 直显,无勾选) ===== */
+/* ===== (4) 读完自检 .questions(followup 直显，无勾选） ===== */
 .questions{display:grid;gap:12px;counter-reset:q;margin-top:12px}
 .question{display:grid;grid-template-columns:54px 1fr;gap:14px;align-items:start;padding:18px;border:1px solid var(--line);background:var(--surface)}
 .question::before{counter-increment:q;content:counter(q,decimal-leading-zero);display:grid;place-items:center;width:46px;height:46px;color:var(--paper);background:var(--gold);font:900 20px/1 var(--font-display)}
@@ -520,7 +520,7 @@ main{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:0 0 60px;isolatio
 .question p{margin:0 0 6px;color:var(--ink-soft-2);font-size:1rem;line-height:1.7}
 .question .q-back{color:var(--blue);font:700 .8125rem/1.3 var(--font-display);text-decoration:none}
 
-/* ===== (5) 同类书卡 .similar(relation 三色徽标) ===== */
+/* ===== (5) 同类书卡 .similar(relation 三色徽标） ===== */
 .similar{margin-bottom:30px}
 .sim-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:12px}
 .sim-card{padding:18px 20px;border:1px solid var(--line);background:var(--surface);transition:border-color .2s,box-shadow .2s}
@@ -553,7 +553,7 @@ main{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:0 0 60px;isolatio
 .shelf-card .sh-title{margin:4px 0;font:800 1rem/1.3 var(--font-display);color:var(--ink)}
 .shelf-card .sh-one{margin:0;color:var(--ink-soft-2);font-size:.875rem;line-height:1.6}
 
-/* ===== (5) 跨域命名 .cross-domain(v4,Q4-3:这套思想在别处叫什么;排 crossbook 之前) ===== */
+/* ===== (5) 跨域命名 .cross-domain(v4,Q4-3：这套思想在别处叫什么；排 crossbook 之前） ===== */
 .cross-domain{margin-bottom:24px}
 .xd-list{display:grid;gap:10px;margin-top:12px}
 .xd-item{display:flex;align-items:baseline;flex-wrap:wrap;gap:8px 12px;padding:14px 18px;border:1px solid var(--line);border-left:4px solid var(--gold);background:var(--surface)}
@@ -568,7 +568,7 @@ main{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:0 0 60px;isolatio
 .xb-echo .tag{margin-right:8px;padding:3px 8px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font:700 11px/1 var(--font-display);white-space:nowrap}
 .xb-echo a{color:var(--blue)}
 
-/* ===== (5) 离开前带走 .takeaway-strip(v4,Q2-1:出口骨架复现,声明式回顾;排末行指路之前) ===== */
+/* ===== (5) 离开前带走 .takeaway-strip(v4,Q2-1：出口骨架复现，声明式回顾；排末行指路之前） ===== */
 .takeaway-strip{margin:26px 0 0;padding:16px 18px;border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:8px;background:var(--surface)}
 .takeaway-strip .tw-head{margin:0 0 8px;color:var(--ink);font:800 1rem/1.4 var(--font-display)}
 .takeaway-strip .tw-formula{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 10px;margin:0 0 12px}
@@ -587,7 +587,7 @@ main{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:0 0 60px;isolatio
 /* ===== Footer ===== */
 .footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font:14px/1.75 var(--font-display)}
 
-/* ===== 浮动控件: 主题切换器(右下,弹层,非默认主题在前) ===== */
+/* ===== 浮动控件： 主题切换器（右下，弹层，非默认主题在前） ===== */
 .theme-picker{position:fixed;right:16px;bottom:20px;z-index:100}
 .theme-picker .tp-trigger{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border:1.5px solid var(--line);border-radius:999px;background:var(--bar-bg);backdrop-filter:blur(8px);color:var(--ink-soft);cursor:pointer;font:800 13px/1 var(--font-display);letter-spacing:.02em;box-shadow:var(--shadow);transition:border-color .2s,color .2s,transform .2s,box-shadow .2s}
 .theme-picker .tp-trigger:hover{border-color:var(--gold);color:var(--ink);transform:translateY(-2px);box-shadow:0 14px 34px color-mix(in srgb,var(--gold) 30%,transparent)}
@@ -602,12 +602,12 @@ main{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:0 0 60px;isolatio
 .theme-picker .tp-menu button .sw{flex:0 0 auto;width:9px;height:9px;border-radius:50%;background:var(--line)}
 .theme-picker .tp-menu button[aria-current="true"] .sw{background:var(--gold)}
 
-/* ===== 出处溯源(data-source 边线 + hover 气泡,常显) ===== */
+/* ===== 出处溯源（data-source 边线 + hover 气泡，常显） ===== */
 [data-source]{position:relative}
 [data-source]::after{content:attr(data-source);position:absolute;left:-4px;bottom:calc(100% + 4px);padding:3px 8px;background:var(--ink);color:var(--paper);font:11px/1.3 var(--font-display);border-radius:3px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .2s;z-index:3}
 [data-source]:hover::after{opacity:1}
 
-/* ===== 页内子视图 .subpage(全屏覆盖,hash 路由;返回件墨色胶囊 + 归属语境) ===== */
+/* ===== 页内子视图 .subpage（全屏覆盖，hash 路由；返回件墨色胶囊 + 归属语境） ===== */
 .subpage{position:fixed;inset:0;z-index:200;overflow-y:auto;background:var(--bg);-webkit-overflow-scrolling:touch}
 .subpage-inner{width:min(980px,calc(100% - 32px));margin:0 auto;padding-bottom:80px}
 .subpage-bar{position:sticky;top:0;z-index:2;display:flex;align-items:center;gap:16px;padding:16px 0;margin-bottom:20px;background:var(--bar-bg);backdrop-filter:blur(8px);border-bottom:2px solid var(--ink)}
@@ -623,10 +623,10 @@ main{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:0 0 60px;isolatio
 .sp-srcs{margin-top:20px;color:var(--muted);font:13px/1.6 var(--font-display)}
 .sp-srcs a{color:var(--blue)}
 
-/* ===== 作者子页 au-*(infobox 归一栏 + 五栏,F2) ===== */
+/* ===== 作者子页 au-*(infobox 归一栏 + 五栏，F2) ===== */
 .au-body{display:grid;grid-template-columns:minmax(0,1fr) 296px;gap:24px 28px;align-items:start}
 .au-tagline{grid-column:1/-1;grid-row:1;margin:0;font:700 1.1875rem/1.7 var(--font-display);color:var(--ink);padding-left:14px;border-left:4px solid var(--gold)}
-/* 身份卡(v4,Q1-6):仅人物书,第一人称引块渲 persona_card;跨全宽,排 au-tagline 之下 */
+/* 身份卡（v4,Q1-6)：仅人物书，第一人称引块渲 persona_card；跨全宽，排 au-tagline 之下 */
 .au-persona{grid-column:1/-1;grid-row:2;margin:0;padding:18px 22px;border:1px solid var(--line);border-left:4px solid var(--red);background:var(--surface-strong);color:var(--ink-soft);font:italic 500 1.0625rem/1.85 var(--font-body);position:relative}
 .au-persona::before{content:"\201C";position:absolute;top:2px;left:10px;color:var(--red);font:900 2rem/1 var(--font-display);opacity:.35}
 .au-infobox{grid-column:2;grid-row:3;align-self:start;position:sticky;top:82px;padding:20px;border:1px solid var(--line);border-top:3px solid var(--red);border-radius:6px;background:var(--surface-strong)}
@@ -669,7 +669,7 @@ main{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:0 0 60px;isolatio
 .au-work a{color:var(--blue)}
 .au-work p{margin:4px 0 0;color:var(--ink-soft-2);font-size:.875rem;line-height:1.6}
 
-/* ===== 观点对照子页 view-topic(沿用 v2 + .vt-focus 争议焦点) ===== */
+/* ===== 观点对照子页 view-topic（沿用 v2 + .vt-focus 争议焦点） ===== */
 .view-topic{margin:0 0 22px;padding:18px 20px;border:1px solid var(--line);background:var(--surface)}
 .vt-viewpoint{margin:0 0 8px;font:800 1.125rem/1.4 var(--font-display);color:var(--ink)}
 .vt-focus{margin:0 0 14px;color:var(--red);font:700 .9375rem/1.5 var(--font-display)}
@@ -688,7 +688,7 @@ main{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:0 0 60px;isolatio
 @keyframes bd-flash{0%{background:var(--tint-accent-strong)}100%{background:transparent}}
 .panel [id]{scroll-margin-top:calc(var(--tab-h, 88px) + 12px)}
 
-/* ===== 响应式(移动端整体降半级) ===== */
+/* ===== 响应式（移动端整体降半级） ===== */
 @media (max-width:880px){
   .cb-banner{grid-template-columns:1fr}
   .cb-banner img.cb-cover{max-height:280px;padding:24px}
@@ -719,64 +719,64 @@ main{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:0 0 60px;isolatio
 }
 
 /* ============================================================
-   v4 批次 C(逐章交互 + UI 精修 + 手机端)· Q5/Q7 追加层
-   全走 token · 零 hex · 禁 prefers-reduced-motion 门控(sandy 机器常开减少动效,门控=看到静止)
+   v4 批次 C（逐章交互 + UI 精修 + 手机端）· Q5/Q7 追加层
+   全走 token · 零 hex · 禁 prefers-reduced-motion 门控（sandy 机器常开减少动效，门控=看到静止）
    ============================================================ */
-/* Q7-11 圆角三档 token(收敛 0/4/6/10/999 混用;--r-card 内容卡 / --r-ui 容器件 / --r-pill 胶囊) */
+/* Q7-11 圆角三档 token（收敛 0/4/6/10/999 混用；--r-card 内容卡 / --r-ui 容器件 / --r-pill 胶囊） */
 :root{--r-card:0;--r-ui:6px;--r-pill:999px}
 .tab{border-radius:var(--r-ui)}
 
-/* Q5-1 / Q7-2 目录行:论点标题独占一行(永不截)+ 摘要另起一行;移动端摘要截 2 行 */
+/* Q5-1 / Q7-2 目录行：论点标题独占一行（永不截）+ 摘要另起一行；移动端摘要截 2 行 */
 .toc-title{display:block;text-wrap:pretty}
 .toc-sum{display:block;margin:3px 0 0;line-height:1.6}
 @media (max-width:880px){
   .toc-sum{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 }
 
-/* Q7-1 正文行长收窄至中文舒适区(~40-44 字/行) */
+/* Q7-1 正文行长收窄至中文舒适区（~40-44 字/行） */
 .bd-chapter .ch-inner{max-width:46em;margin:0 auto}
 .section-lead,.arg-restate p,.vb-text,.soul-intro{max-width:44em}
 .bd-chapter p{text-wrap:pretty}
 .section-title,.zone-title,.bd-chapter h3{text-wrap:balance}
 .qw-card blockquote{max-width:40em}
 
-/* Q7-5 sticky tab 毛玻璃 + 吸顶阴影(sentinel + IntersectionObserver 切 .stuck) */
+/* Q7-5 sticky tab 毛玻璃 + 吸顶阴影（sentinel + IntersectionObserver 切 .stuck) */
 .tabs{backdrop-filter:saturate(160%) blur(12px);-webkit-backdrop-filter:saturate(160%) blur(12px)}
 .tabs.stuck{box-shadow:0 8px 24px -18px rgba(0,0,0,.4)}
 .tabs-sentinel{height:1px;margin:0 0 -1px}
 
-/* Q7-4 微动效:章展开 rise / 按压 scale .985 / 主题弹层 pop -- 无 reduced-motion 门控 */
+/* Q7-4 微动效：章展开 rise / 按压 scale .985 / 主题弹层 pop -- 无 reduced-motion 门控 */
 .bd-chapter.open .ch-inner{animation:rise .3s ease both}
 .tab,.next-cta,.cc-chip,.rc-chip,.toc-row,.ci,.md-head,.sub-back,.toc-expand,.ch-act,.rp-step,.tn-row,.chain-step{transition:transform .12s ease,border-color .2s ease,background .2s ease}
 .tab:active,.next-cta:active,.cc-chip:active,.rc-chip:active,.toc-row:active,.ci:active,.md-head:active,.toc-expand:active,.ch-act:active,.rp-step:active,.tn-row:active,.chain-step:active{transform:scale(.985)}
 @keyframes tp-pop{from{opacity:0;transform:scale(.94) translateY(4px)}to{opacity:1;transform:none}}
 .theme-picker[data-open="1"] .tp-menu{animation:tp-pop .18s cubic-bezier(.2,.8,.3,1.1) both;transform-origin:100% 100%}
 
-/* Q7-8 触达目标 ≥44px(行内传送门负 margin 扩热区,版面零位移)+ 全局焦点环 */
+/* Q7-8 触达目标 ≥44px（行内传送门负 margin 扩热区，版面零位移）+ 全局焦点环 */
 .qw-teleport,.rc-teleport,.q-back,.r-src,.ci-teleport,.ci-portal,.extend-pointer a{padding:12px 10px;margin:-12px -10px;position:relative;z-index:1}
 @media (pointer:coarse){
   .cc-chip,.rc-chip,.toc-expand,.ch-act,.sub-back,.tp-trigger,.rp-step{min-height:44px}
 }
 :is(.tab,.toc-row,.ci,.cc-chip,.rc-chip,.next-cta,.md-head,.toc-expand,.ch-act,.rp-step,.tn-row,.chain-step,a):focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 
-/* Q5-8 目录行整行可点 + hover 底色(点开平滑滚动落 tab 下沿由 scroll-margin-top 兜) */
+/* Q5-8 目录行整行可点 + hover 底色（点开平滑滚动落 tab 下沿由 scroll-margin-top 兜） */
 .toc-row:hover{background:var(--tint-accent)}
 
-/* Q5-3 读/开态视觉分离:开=金标+金描边高亮(正在读);读=绿标+✓ 角标(读到章尾才计,见 JS IO) */
+/* Q5-3 读/开态视觉分离：开=金标+金描边高亮（正在读）；读=绿标+✓ 角标（读到章尾才计，见 JS IO) */
 .toc-no{position:relative}
 .toc-row.open .toc-no{background:var(--gold);color:var(--white)}
 .toc-row.open{border-color:var(--gold);box-shadow:var(--shadow)}
 .toc-row.read .toc-no{background:var(--green);color:var(--white)}
 .toc-row.read .toc-no::after{content:"\2713";position:absolute;right:-4px;bottom:-4px;width:15px;height:15px;display:grid;place-items:center;border-radius:50%;background:var(--green);color:var(--white);border:2px solid var(--paper);font:800 9px/1 var(--font-display)}
 
-/* Q5-2 章尾下一章预告卡 / 末章终局卡(JS 读 toc 论点标题 + 读时填充,保留 .ch-next 契约) */
+/* Q5-2 章尾下一章预告卡 / 末章终局卡（JS 读 toc 论点标题 + 读时填充，保留 .ch-next 契约） */
 .ch-actions .ch-next.cn-card,.ch-actions .ch-final{flex:1 1 100%;display:flex;flex-direction:column;align-items:flex-start;gap:3px;padding:14px 18px;text-align:left;border-radius:var(--r-ui)}
 .ch-next .cn-kick{font:700 .75rem/1.3 var(--font-display);opacity:.86;letter-spacing:.02em}
 .ch-next .cn-title{font:800 1.0625rem/1.35 var(--font-display)}
 .ch-next .cn-meta{font:700 .8125rem/1.3 var(--font-display);opacity:.92}
 
-/* Q5-4 阅读中微型上下文条:挂 tab 栏下沿(top:--tab-h,与 Q7-6 同吸顶层,两者总高约 96px)
-   章正文入视口时显、离开隐(IntersectionObserver,与 Q5-3 共用观测) */
+/* Q5-4 阅读中微型上下文条：挂 tab 栏下沿（top:--tab-h，与 Q7-6 同吸顶层，两者总高约 96px)
+   章正文入视口时显、离开隐（IntersectionObserver，与 Q5-3 共用观测） */
 .ch-ctxbar{position:sticky;top:var(--tab-h,64px);z-index:40;display:none;align-items:center;gap:9px;height:32px;padding:0 6px 0 14px;margin:0 0 12px;border:1px solid var(--line);border-radius:var(--r-pill);background:var(--bar-bg);backdrop-filter:saturate(160%) blur(12px);-webkit-backdrop-filter:saturate(160%) blur(12px);color:var(--ink-soft);font:700 .8125rem/1 var(--font-display);box-shadow:var(--shadow)}
 .ch-ctxbar.show{display:flex}
 .ch-ctxbar .cx-ch{color:var(--ink);white-space:nowrap}
@@ -785,7 +785,7 @@ main{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:0 0 60px;isolatio
 .ch-ctxbar .cx-totoc{margin-left:auto;flex:0 0 auto;padding:6px 13px;border:1px solid var(--line);border-radius:var(--r-pill);background:var(--surface);color:var(--ink-soft);font:700 .75rem/1 var(--font-display);cursor:pointer}
 .ch-ctxbar .cx-totoc:hover{border-color:var(--gold);color:var(--ink)}
 
-/* Q7-11 张力行三栏居中(A 右 / 箭头中 / B 左)+ 行尾 ▾ 可点线索;观点卡奇数末卡跨满 */
+/* Q7-11 张力行三栏居中（A 右 / 箭头中 / B 左）+ 行尾 ▾ 可点线索；观点卡奇数末卡跨满 */
 .tn-head{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:14px}
 .tn-a{text-align:right}
 .tn-b{text-align:left}
@@ -793,16 +793,16 @@ main{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:0 0 60px;isolatio
 .tn-row.open::after{transform:rotate(180deg)}
 .ci-list .ci:last-child:nth-child(odd):not(.ci-primary){grid-column:1/-1}
 
-/* Q7-11 出处气泡 z 提高(防被 sticky 栏截半)+ 贴左缘归位 */
+/* Q7-11 出处气泡 z 提高（防被 sticky 栏截半）+ 贴左缘归位 */
 [data-source]::after{z-index:60;left:0}
 
-/* Q7-11 主题浮钮小屏图标钮化(48 圆钮,达 44 触达,只留 🎨) */
+/* Q7-11 主题浮钮小屏图标钮化（48 圆钮，达 44 触达，只留 🎨) */
 @media (max-width:720px){
   .theme-picker .tp-trigger{width:48px;height:48px;padding:0;justify-content:center;border-radius:50%}
   .theme-picker .tp-trigger .tp-label,.theme-picker .tp-trigger .tp-caret{display:none}
 }
 
-/* Q7-6 移动端 tab 栏改 sticky 单行横滑(~64px;tab-sub 隐藏;min 48;激活 tab 由 JS scrollIntoView 居中) */
+/* Q7-6 移动端 tab 栏改 sticky 单行横滑（~64px;tab-sub 隐藏；min 48；激活 tab 由 JS scrollIntoView 居中） */
 @media (max-width:880px){
   .tabs{position:sticky;top:0;display:flex;overflow-x:auto;gap:6px;padding:6px 10px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
   .tabs::-webkit-scrollbar{display:none}
@@ -810,7 +810,7 @@ main{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:0 0 60px;isolatio
   .tab .tab-sub{display:none}
 }
 
-/* Q7-7 暗色主题眉题对比:深底暗红 13px 小字不过 AA → 改金(金在深底天然达标,仍零 hex) */
+/* Q7-7 暗色主题眉题对比：深底暗红 13px 小字不过 AA → 改金（金在深底天然达标，仍零 hex) */
 body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:var(--gold)}
 
 /* ===== 本书设计层(Step5 产出;品牌锁八成,书魂放两成) ===== */
@@ -857,7 +857,7 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
         ② 形态在站内没有先例 -- 前 21 处 signature 都是「规则重复」类记号
            (刻度/序号/等式/排比/替换/竖栏/杠铃/对置器物/一条线的三种纹理/二十五格/两条同起点的线),
            这里是第一次用**一张二维判定表**当记号:它本身就是一个判断容器,不是一个图案;
-        ③ 零成本零图片 -- 网格走 flex + gap,格子是高 34px 的 <i>,虚线/实线/底色/圆点全部
+        ③ 零成本零图片 -- 网格走 flex + gap，格子是高 34px 的 <i>，虚线/实线/底色/圆点全部
            color-mix(... var(--red|--ink) ...),不写死一个 hex。
       只此一处(Chanel 法则)。 */
 .sig-quad{display:block;margin-top:26px;padding-top:4px;max-width:430px}
@@ -945,95 +945,95 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
 
         <div class="bd-coreideas">
       <h2 class="section-title">核心观点</h2>
-      <p class="section-lead">全书 20 条主张按三根支柱归组,每条一句讲清 + 一句生活类比;最核心 2 条放大。点任一条看它的解释、证据与证据强度。</p>
+      <p class="section-lead">全书 20 条主张按三根支柱归组，每条一句讲清 + 一句生活类比；最核心 2 条放大。点任一条看它的解释、证据与证据强度。</p>
       <div class="ci-group">
         <h3 class="ci-group-head">① 结果不判案 · 第2·3·6·7·11·12章</h3>
         <div class="ci-list">
           <article class="ci ci-primary" data-source="原书第1章 · 约全书5%处">
             <p class="ci-idea">决策质量和结果质量是两件事</p>
             <p class="ci-analogy">就像 -- 医生做了一个成功率九成的手术，病人恰好是那一成，这不说明医生的判断错了</p>
-            <p class="ci-more">点击展开:解释 + 证据 + 证据强度 ▾</p>
+            <p class="ci-more">点击展开：解释 + 证据 + 证据强度 ▾</p>
             <div class="ci-detail">
               <p class="ci-explain">同一个决策，可能因为运气得出两种截然相反的结果，而决策本身的质量没有变。所以评价一个决定，只能看它在当时掌握的信息下是否合理，不能看它后来变成了什么。这是全书的地基，后面所有方法都是在这一句话上长出来的。</p>
               <p class="ci-evidence">第1章写 2015 年第 49 届超级碗：还剩 26 秒、落后 4 分、球在爱国者 1 码线上，卡罗尔没让全联盟最好的跑卫林奇冲球，而是让威尔逊传球，被截获。媒体连夜把它评为史上最差决策。杜克引用 538 与《斯莱特》的分析：那个赛季全联盟在 1 码线上传球 66 次，0 次被截获，过去十五个赛季同位置拦截率约 2%。</p>
-              <span class="ci-evlevel" data-level="confirmed">证据强度:原文确认</span>
+              <span class="ci-evlevel" data-level="confirmed">证据强度：原文确认</span>
               <a class="ci-teleport" href="#ch-2">出自第 2 章 →</a>
             </div>
           </article>
           <article class="ci" data-source="原书第1章 · 约全书5%处">
             <p class="ci-idea">用结果反推决策，会让你改掉本来正确的方法</p>
             <p class="ci-analogy">就像 -- 一次感冒吃了药就好了，不代表这药能治感冒；下次不吃也可能好</p>
-            <p class="ci-more">点击展开:解释 + 证据 + 证据强度 ▾</p>
+            <p class="ci-more">点击展开：解释 + 证据 + 证据强度 ▾</p>
             <div class="ci-detail">
               <p class="ci-explain">以结果为导向最实际的危害不是评价失真，而是行动被带偏：一次坏结果就足以让人推翻一整套本来合理的流程。杜克在咨询中反复遇到这种 CEO，他们把自己最深思熟虑的决定说成最糟的决定，只因为它没成功。</p>
               <p class="ci-evidence">第1章写一位 CEO 把解雇总经理列为最糟决策，理由是之后没找到合适的继任者、销量下滑。杜克逐条追问决策过程：先对比同行发现效益落后，再与总经理共同确认技能差距，还请了高管教练，最后才决定解雇，并考虑过分权方案。在场所有人都认为流程合理，但 CEO 依然认为这是个错误决定。</p>
-              <span class="ci-evlevel" data-level="confirmed">证据强度:原文确认</span>
+              <span class="ci-evlevel" data-level="confirmed">证据强度：原文确认</span>
               <a class="ci-teleport" href="#ch-2">出自第 2 章 →</a>
             </div>
           </article>
           <article class="ci" data-source="原书第1章 · 约全书12%处">
             <p class="ci-idea">生活更像扑克，因为牌是扣着的</p>
             <p class="ci-analogy">就像 -- 考试有标准答案，创业没有；考砸了可以说没复习，创业失败说不清是哪一步</p>
-            <p class="ci-more">点击展开:解释 + 证据 + 证据强度 ▾</p>
+            <p class="ci-more">点击展开：解释 + 证据 + 证据强度 ▾</p>
             <div class="ci-detail">
               <p class="ci-explain">象棋里所有信息都在棋盘上，输了必然有一步走错；扑克里有隐藏信息和运气，赢了可能是手气，输了可能是运气。把生活当象棋来复盘，就会把每一次坏结果都记成自己的错，把每一次好结果都记成自己的本事。</p>
               <p class="ci-evidence">第1章引冯·诺依曼在伦敦出租车上的话：象棋不是博弈，象棋是一种定义明确的计算形式，任何局势下都存在一套正确的下法；真正的博弈有虚张声势、有欺诈、要掂量对方怎么看你的意图。杜克补充：象棋里高手几乎必胜，扑克里新手赢一手完全可能。</p>
-              <span class="ci-evlevel" data-level="confirmed">证据强度:原文确认</span>
+              <span class="ci-evlevel" data-level="confirmed">证据强度：原文确认</span>
               <a class="ci-teleport" href="#ch-3">出自第 3 章 →</a>
             </div>
           </article>
           <article class="ci" data-source="原书第1章 · 约全书12%处">
             <p class="ci-idea">四次掷币什么都证明不了，一万次才有意义</p>
             <p class="ci-analogy">就像 -- 房子三年涨了五成，你分不清是自己眼光好还是整个市场在涨</p>
-            <p class="ci-more">点击展开:解释 + 证据 + 证据强度 ▾</p>
+            <p class="ci-more">点击展开：解释 + 证据 + 证据强度 ▾</p>
             <div class="ci-detail">
               <p class="ci-explain">人生最大的统计困境是样本量为 1：每一次决策只发生一次，你永远拿不到对照组。所以从单次结果里总结规律，本质上是在极小样本上做统计推断，而这个推断往往是错的。</p>
               <p class="ci-evidence">第1章用《公主新娘》的毒酒场景说明：维齐尼推理了半天，唯独没想到两只杯子都下了毒。杜克接着算连续四次正面的概率是 6.25%，然后指出真正的问题不是算得对不对，而是你根本不知道这枚硬币是否被配重、掷币者是否是魔术师；换成掷一万次，才有足够样本判断硬币有没有被动过手脚。</p>
-              <span class="ci-evlevel" data-level="confirmed">证据强度:原文确认</span>
+              <span class="ci-evlevel" data-level="confirmed">证据强度：原文确认</span>
               <a class="ci-teleport" href="#ch-3">出自第 3 章 →</a>
             </div>
           </article>
           <article class="ci" data-source="原书第3章 · 约全书36%处">
             <p class="ci-idea">结果即反馈，但反馈要先做运气与技能的分拣</p>
             <p class="ci-analogy">就像 -- 股票赚了钱，你分不清是研究做对了，还是那年整个板块都在涨</p>
-            <p class="ci-more">点击展开:解释 + 证据 + 证据强度 ▾</p>
+            <p class="ci-more">点击展开：解释 + 证据 + 证据强度 ▾</p>
             <div class="ci-detail">
               <p class="ci-explain">从经验中学习的前提，是能判断这次结果主要由决策造成还是由运气造成。这一步做错，学到的东西就是反的：该改的没改，不该改的改了。杜克把它称为「分拣决策」。</p>
               <p class="ci-evidence">第3章写希腊人尼克认为两张 A 是最差起手牌，因为别人猜得到，而一张 7 加一张不同花色的 2 才是最好的。他赢的时候归功于自己的技术，输的时候归咎运气，于是他从不质疑信念。杜克接着引健康甜点现象：低脂潮流下美国人把脂肪热量砍掉四分之一、膳食金字塔把碳水提高到 6 到 11 份，肥胖率反而涨到三倍，而当时的人无法从体重增加里分辨出这是自己的选择错了还是代谢的运气。</p>
-              <span class="ci-evlevel" data-level="confirmed">证据强度:原文确认</span>
+              <span class="ci-evlevel" data-level="confirmed">证据强度：原文确认</span>
               <a class="ci-teleport" href="#ch-6">出自第 6 章 →</a>
             </div>
           </article>
           <article class="ci" data-source="原书第3章 · 约全书46%处">
             <p class="ci-idea">同一件事，对自己和对别人用两套解释</p>
             <p class="ci-analogy">就像 -- 同事升职是运气好会拍马屁，自己没升是领导眼瞎</p>
-            <p class="ci-more">点击展开:解释 + 证据 + 证据强度 ▾</p>
+            <p class="ci-more">点击展开：解释 + 证据 + 证据强度 ▾</p>
             <div class="ci-detail">
               <p class="ci-explain">自利性偏差是双向的：自己的坏结果是运气，别人的坏结果是水平；自己的好结果是水平，别人的好结果是运气。它让人自我感觉良好，代价是永远学不到东西。</p>
               <p class="ci-evidence">第3章指出这是职业扑克选手最大的魔障：赢了归功于出色的决策，输了归咎于运气差，这样的复盘做一万次也不会进步。杜克拿菲尔·艾维做反例：他那天赢了五十万美元，庆祝方式是把杜克的哥哥拉去餐馆，把自己当天所有可能的错误摊开来听意见。</p>
-              <span class="ci-evlevel" data-level="confirmed">证据强度:原文确认</span>
+              <span class="ci-evlevel" data-level="confirmed">证据强度：原文确认</span>
               <a class="ci-teleport" href="#ch-7">出自第 7 章 →</a>
             </div>
           </article>
           <article class="ci" data-source="原书第6章 · 约全书95%处">
             <p class="ci-idea">事后偏见是一把电锯，会锯掉所有没实现的分枝</p>
             <p class="ci-analogy">就像 -- 事故发生后所有人都说这早该预料到，事故前却没人提过</p>
-            <p class="ci-more">点击展开:解释 + 证据 + 证据强度 ▾</p>
+            <p class="ci-more">点击展开：解释 + 证据 + 证据强度 ▾</p>
             <div class="ci-detail">
               <p class="ci-explain">过去只有一个，未来有很多个。当某个未来实现，我们回头看，会把其他可能性全部删掉，于是那件事显得必然发生。这个错觉让所有事后复盘都变得不诚实。</p>
               <p class="ci-evidence">第6章把时间比作一棵树：树干是过去，树枝是各种可能的未来，现在就是树干与树枝的交汇处，而不断前进的现在是一把电锯。杜克引第七巡回上诉法院法官伊斯特布鲁克在 Jentz 诉 Conagra 案中的异议：粮仓爆炸后陪审团判了 1.8 亿美元惩罚性赔偿，但没有任何记录显示工头让工人进隧道搬工具时存在爆炸威胁，判决是事后偏见的结果。</p>
-              <span class="ci-evlevel" data-level="confirmed">证据强度:原文确认</span>
+              <span class="ci-evlevel" data-level="confirmed">证据强度：原文确认</span>
               <a class="ci-teleport" href="#ch-12">出自第 12 章 →</a>
             </div>
           </article>
           <article class="ci" data-source="原书第6章 · 约全书83%处">
             <p class="ci-idea">情绪接管决策的那个瞬间，有个专门的名字</p>
             <p class="ci-analogy">就像 -- 吵到一半突然词不达意，那就是你的前额皮层下班了</p>
-            <p class="ci-more">点击展开:解释 + 证据 + 证据强度 ▾</p>
+            <p class="ci-more">点击展开：解释 + 证据 + 证据强度 ▾</p>
             <div class="ci-detail">
               <p class="ci-explain">倾斜（tilt）指的是坏结果引发情绪波动，情绪波动导致更差的决策，更差的决策带来更坏的结果。它是一个正反馈环，一旦启动就会自我加速，所以必须靠预设的规则打断，不能靠当场自制。</p>
               <p class="ci-evidence">第6章解释这个词来自弹球机：玩家猛晃机器时传感器会停机、手柄失灵、屏幕闪出 TILT。杜克说倾斜的时候人的状态就是这样：杏仁核启动，前额皮层被关闭，认知控制中心下线。生理迹象是脸热、心跳快、呼吸急；语言迹象是「又来一次？」或者「不如直接把钱送给对手」。</p>
-              <span class="ci-evlevel" data-level="confirmed">证据强度:原文确认</span>
+              <span class="ci-evlevel" data-level="confirmed">证据强度：原文确认</span>
               <a class="ci-teleport" href="#ch-11">出自第 11 章 →</a>
             </div>
           </article>
@@ -1045,55 +1045,55 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
           <article class="ci ci-primary" data-source="原书第2章 · 约全书26%处">
             <p class="ci-idea">把信心写成百分比，别写成对错</p>
             <p class="ci-analogy">就像 -- 天气预报说降水概率 70%，你不会问它到底下不下，你带伞</p>
-            <p class="ci-more">点击展开:解释 + 证据 + 证据强度 ▾</p>
+            <p class="ci-more">点击展开：解释 + 证据 + 证据强度 ▾</p>
             <div class="ci-detail">
               <p class="ci-explain">信念不是二值的。说「我认为 X」和说「我有六成把握认为 X」是两种完全不同的认知状态，后者允许你在新证据出现时把 58% 调成 46%，而不必承认自己整个错了。这一步看似只是措辞，实际是把信念从身份认同里解放出来。</p>
               <p class="ci-evidence">第2章提出 0 到 10 的打分法，直接换算成百分比：3 代表三成把握，9 代表九成把握。杜克用《公民凯恩》举例：不说它拿过奥斯卡最佳影片，而说我有六成把握它拿过，那就有四成可能是我记错了。她还给出范围表达法，比如猫王去世时是 40 到 47 岁之间。</p>
-              <span class="ci-evlevel" data-level="confirmed">证据强度:原文确认</span>
+              <span class="ci-evlevel" data-level="confirmed">证据强度：原文确认</span>
               <a class="ci-teleport" href="#ch-5">出自第 5 章 →</a>
             </div>
           </article>
           <article class="ci" data-source="原书第2章 · 约全书26%处">
             <p class="ci-idea">人的默认设置是先相信，再（偶尔）验证</p>
             <p class="ci-analogy">就像 -- 朋友圈看到一条消息，你先信了，转发之后才想起来该查一下</p>
-            <p class="ci-more">点击展开:解释 + 证据 + 证据强度 ▾</p>
+            <p class="ci-more">点击展开：解释 + 证据 + 证据强度 ▾</p>
             <div class="ci-detail">
               <p class="ci-explain">我们以为自己的信念形成顺序是听到、验证、相信，实际顺序是听到、相信、偶尔才验证。这不是懒惰，是进化留下的省力机制：在草原上怀疑自己眼睛的成本远高于误判。但语言出现之后，这套机制开始处理二手信息，就出了系统性问题。</p>
               <p class="ci-evidence">第2章引吉尔伯特 1991 年的综述：人类是易轻信的生物，很容易相信，却很难产生怀疑。随后是颜色编码实验：受试者阅读标记真伪的陈述，在时间压力与注意力分散下，他们把被标记为假的陈述也一律当成真的。杜克自己的例子是谢顶基因来自外祖父、以及狗龄乘以七这两个流传极广的错误说法。</p>
-              <span class="ci-evlevel" data-level="confirmed">证据强度:原文确认</span>
+              <span class="ci-evlevel" data-level="confirmed">证据强度：原文确认</span>
               <a class="ci-teleport" href="#ch-5">出自第 5 章 →</a>
             </div>
           </article>
           <article class="ci" data-source="原书第2章 · 约全书26%处">
             <p class="ci-idea">信念一旦成立，就会自己去找证据</p>
             <p class="ci-analogy">就像 -- 同一场家庭争吵，婆媳双方各自都能回忆起对方先动的嘴</p>
-            <p class="ci-more">点击展开:解释 + 证据 + 证据强度 ▾</p>
+            <p class="ci-more">点击展开：解释 + 证据 + 证据强度 ▾</p>
             <div class="ci-detail">
               <p class="ci-explain">动机性推理的机制是：既有信念决定你如何筛选和处理新信息，新信息又强化既有信念。所以你越查越觉得自己对，不是因为证据变多了，而是因为你的检索方向被信念锁定了。</p>
               <p class="ci-evidence">第2章写 1951 年 11 月 23 日达特茅斯对普林斯顿的比赛：普林斯顿 13 比 0 获胜，达特茅斯被罚 70 码、普林斯顿 25 码，卡兹梅尔脑震荡加鼻梁骨折。两位心理学教授哈斯托夫与坎特里尔把录像放给两校学生看，普林斯顿学生数出的达特茅斯犯规是己方两倍、轻微犯规三倍，达特茅斯学生认为双方一样多。1954 年的论文题目就叫《他们观看了一场比赛》。</p>
-              <span class="ci-evlevel" data-level="confirmed">证据强度:原文确认</span>
+              <span class="ci-evlevel" data-level="confirmed">证据强度：原文确认</span>
               <a class="ci-teleport" href="#ch-5">出自第 5 章 →</a>
             </div>
           </article>
           <article class="ci" data-source="原书第2章 · 约全书26%处">
             <p class="ci-idea">聪明不能免疫偏见，反而让偏见更精致</p>
             <p class="ci-analogy">就像 -- 越会说话的人越能把自己说服，也越难被别人劝回来</p>
-            <p class="ci-more">点击展开:解释 + 证据 + 证据强度 ▾</p>
+            <p class="ci-more">点击展开：解释 + 证据 + 证据强度 ▾</p>
             <div class="ci-detail">
               <p class="ci-explain">普遍假设是高智商更擅长识破假信息。实验结论相反：认知能力越强，越擅长为既有立场搭建论证，盲点偏见也越大。所以「我读过很多书」不构成任何免疫证明。</p>
               <p class="ci-evidence">第2章引韦斯特、梅泽夫与斯坦诺维奇 2012 年的研究：七项认知偏差测试里，有六项显示认知能力更好的参与者表现出更大的偏见盲点，重复实验结论一致。卡汉的实验更直接：同一组皮肤护理数据换成枪支管制议题后，数学能力好的人两极分化反而更严重，他们更擅长用数字支持自己原有的立场。</p>
-              <span class="ci-evlevel" data-level="confirmed">证据强度:原文确认</span>
+              <span class="ci-evlevel" data-level="confirmed">证据强度：原文确认</span>
               <a class="ci-teleport" href="#ch-5">出自第 5 章 →</a>
             </div>
           </article>
           <article class="ci" data-source="原书第2章 · 约全书26%处">
             <p class="ci-idea">承认不确定不是示弱，是提高可信度</p>
             <p class="ci-analogy">就像 -- 老医生说这个病我见过几十例，八成是这个原因；江湖医生说包治，你信哪个</p>
-            <p class="ci-more">点击展开:解释 + 证据 + 证据强度 ▾</p>
+            <p class="ci-more">点击展开：解释 + 证据 + 证据强度 ▾</p>
             <div class="ci-detail">
               <p class="ci-explain">直觉上，说满话的人显得更权威。实际相反：一个说自己百分之百确定的人，和一个说自己八成确定的人，听众更信后者。因为把不确定性说出来，等于公开了自己评估信息的标准。</p>
               <p class="ci-evidence">第2章论证这条：把信心写成低于 100% 的表达，表明说话人考虑过信息的数量与质量，也有自知之明。杜克还指出这样做的第二个好处，是别人更愿意补充信息，因为不必用「你错了」的方式来开口。她把这个机制和科学界的做法对应起来：科学家发表结果时同时公布方法、数据、p 值与置信区间，等于把不确定性制度化。</p>
-              <span class="ci-evlevel" data-level="confirmed">证据强度:原文确认</span>
+              <span class="ci-evlevel" data-level="confirmed">证据强度：原文确认</span>
               <a class="ci-teleport" href="#ch-5">出自第 5 章 →</a>
             </div>
           </article>
@@ -1105,77 +1105,77 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
           <article class="ci" data-source="原书第4章 · 约全书56%处">
             <p class="ci-idea">团体能改善判断，因为它塞进了责任性和不同视角</p>
             <p class="ci-analogy">就像 -- 一个人写方案容易自嗨，交给三个同事过一遍就会发现问题</p>
-            <p class="ci-more">点击展开:解释 + 证据 + 证据强度 ▾</p>
+            <p class="ci-more">点击展开：解释 + 证据 + 证据强度 ▾</p>
             <div class="ci-detail">
               <p class="ci-explain">一个人做判断，没人需要解释；一群人等结果，你必须把理由说清楚。责任性提高了解释成本，多样性提供了替代解释。这两样加在一起，才让团体比个人更准。</p>
               <p class="ci-evidence">第4章写「100 个白色城堡汉堡」那场实验：公开表态并对结果负责的人，会更认真地评估信息。杜克在牌桌上组了一个固定的小组，每场结束后互相复盘，规则是先把话说完、不许打断。她强调团体不是求安慰的地方，是求真。</p>
-              <span class="ci-evlevel" data-level="confirmed">证据强度:原文确认</span>
+              <span class="ci-evlevel" data-level="confirmed">证据强度：原文确认</span>
               <a class="ci-teleport" href="#ch-8">出自第 8 章 →</a>
             </div>
           </article>
           <article class="ci" data-source="原书第4章 · 约全书63%处">
             <p class="ci-idea">同质的小组会往极端走，异质的小组会往中间收</p>
             <p class="ci-analogy">就像 -- 一屋子都是同一立场的人开会，结论一定比他们各自原本的想法更激进</p>
-            <p class="ci-more">点击展开:解释 + 证据 + 证据强度 ▾</p>
+            <p class="ci-more">点击展开：解释 + 证据 + 证据强度 ▾</p>
             <div class="ci-detail">
               <p class="ci-explain">团体不天然纠偏，方向取决于构成。全是同类的组会互相确认，然后一起走得更远；组里只要有一个持不同立场的人，其他人的表态就会向他收敛。这个效应在数据上非常明显。</p>
               <p class="ci-evidence">第4章引桑斯坦对联邦上诉法院的研究：涵盖六千多份上诉和近两万次个人投票。对原告总体投票率 43% 的民主党法官，和两名共和党法官同组时降到 10%；总体 20% 的共和党法官，和两名民主党法官同组时升到 42%。结论是单个来自另一党的成员起了相当大的约束作用。</p>
-              <span class="ci-evlevel" data-level="confirmed">证据强度:原文确认</span>
+              <span class="ci-evlevel" data-level="confirmed">证据强度：原文确认</span>
               <a class="ci-teleport" href="#ch-9">出自第 9 章 →</a>
             </div>
           </article>
           <article class="ci" data-source="原书第5章 · 约全书71%处">
             <p class="ci-idea">求真的团体需要制度化的异议，不是靠自觉</p>
             <p class="ci-analogy">就像 -- 公司开会时没人敢说老板的方案有问题，那这个会等于没开</p>
-            <p class="ci-more">点击展开:解释 + 证据 + 证据强度 ▾</p>
+            <p class="ci-more">点击展开：解释 + 证据 + 证据强度 ▾</p>
             <div class="ci-detail">
               <p class="ci-explain">默顿把科学界的自我纠错机制写成了四条规范，杜克把它搬到任何需要判断的小组里。关键在最后一条：有条理的怀疑性不是态度，是被制度保护的异议权。</p>
               <p class="ci-evidence">第5章写默顿 1910 年生于费城南部，少年时想做魔术师，艺名罗伯特·梅林，被朋友说没创意后改用罗伯特·默顿。1942 年起草、1973 年定稿的那篇论文只有十二页，提出 CUDOS：共有性（数据属于团体）、普遍性（主张和证据统一标准）、无私利性（警惕利益冲突）、有条理的怀疑性（鼓励参与和异议）。杜克在此基础上补了两条操作规则。</p>
-              <span class="ci-evlevel" data-level="confirmed">证据强度:原文确认</span>
+              <span class="ci-evlevel" data-level="confirmed">证据强度：原文确认</span>
               <a class="ci-teleport" href="#ch-10">出自第 10 章 →</a>
             </div>
           </article>
           <article class="ci" data-source="原书第6章 · 约全书83%处">
             <p class="ci-idea">我们亏待未来的自己，因为未来的自己不会到场投票</p>
             <p class="ci-analogy">就像 -- 深夜刷手机的那个你，和第二天早上后悔的那个你，不是同一个人</p>
-            <p class="ci-more">点击展开:解释 + 证据 + 证据强度 ▾</p>
+            <p class="ci-more">点击展开：解释 + 证据 + 证据强度 ▾</p>
             <div class="ci-detail">
               <p class="ci-explain">时间贴现的意思是：眼下的满足感是全价的，未来的收益是打过折的。熬夜、超支、不存养老金，都是同一个机制在不同场景下的表现。解法不是意志力，是让未来的自己提前到场。</p>
               <p class="ci-evidence">第6章用宋飞的段子开场：夜猫子杰瑞想熬到几点就熬到几点，早起者杰瑞第二天替他受罪。接着是 1990 年代美国军事缩编的案例：成千上万军人选择一次性领取退休金，总额 25 亿美元，只相当于本来应得年金现值的 40%。杜克还引拜伦森与卡斯坦森的虚拟现实实验：看到老年版自己的受试者，把一千美元里分给养老账户的平均金额从 73.90 美元升到 178.10 美元。</p>
-              <span class="ci-evlevel" data-level="confirmed">证据强度:原文确认</span>
+              <span class="ci-evlevel" data-level="confirmed">证据强度：原文确认</span>
               <a class="ci-teleport" href="#ch-11">出自第 11 章 →</a>
             </div>
           </article>
           <article class="ci" data-source="原书第6章 · 约全书83%处">
             <p class="ci-idea">后悔要放在决策之前，不是之后</p>
             <p class="ci-analogy">就像 -- 买之前先想清楚亏多少你会睡不着，而不是等亏了再想</p>
-            <p class="ci-more">点击展开:解释 + 证据 + 证据强度 ▾</p>
+            <p class="ci-more">点击展开：解释 + 证据 + 证据强度 ▾</p>
             <div class="ci-detail">
               <p class="ci-explain">后悔本身没有错，错的是时机。事情已经发生，后悔只消耗情绪；事情还没发生，后悔能改变选择。所以要把这种感受提前调用，让它成为决策的一部分。</p>
               <p class="ci-evidence">第6章引尼采说懊悔是重复第一次的愚蠢，又引梭罗说要呵护遗憾直到它长出果实，杜克认为两人说的其实是一件事的两个时点。她的落地办法是损失限额：在牌桌上先跟自己和小团体约定止损线，于是每次想加筹码之前，脑子里会先出现事后要向团体解释的情景，这一步让她有机会在决策前后悔。</p>
-              <span class="ci-evlevel" data-level="confirmed">证据强度:原文确认</span>
+              <span class="ci-evlevel" data-level="confirmed">证据强度：原文确认</span>
               <a class="ci-teleport" href="#ch-11">出自第 11 章 →</a>
             </div>
           </article>
           <article class="ci" data-source="原书第6章 · 约全书95%处">
             <p class="ci-idea">把不确定性算成钱，直觉才会让位</p>
             <p class="ci-analogy">就像 -- 两个offer，一个年薪三十万但可能明年就没了，一个二十万很稳，你得乘上概率再比</p>
-            <p class="ci-more">点击展开:解释 + 证据 + 证据强度 ▾</p>
+            <p class="ci-more">点击展开：解释 + 证据 + 证据强度 ▾</p>
             <div class="ci-detail">
               <p class="ci-explain">情景规划的核心动作只有一步：把每个可能的结果乘上它的概率，得到一个期望值。不做这一步，人就会盯着最大的那个数字，而不是最值钱的那个。</p>
               <p class="ci-evidence">第6章写杜克为「课外全明星」做咨询，这家 1992 年由施瓦辛格创立、覆盖 18 个城市七万多名学生的机构靠政府拨款运转。杜克问每笔拨款值多少，对方指着申请金额那一栏。她算给他们看：十万块、成功率四分之一，值两万五；二十万、成功率一成，值两万；五万、成功率七成，值三万五。真正最不值钱的是那张最大的申请。</p>
-              <span class="ci-evlevel" data-level="confirmed">证据强度:原文确认</span>
+              <span class="ci-evlevel" data-level="confirmed">证据强度：原文确认</span>
               <a class="ci-teleport" href="#ch-12">出自第 12 章 →</a>
             </div>
           </article>
           <article class="ci" data-source="原书第6章 · 约全书95%处">
             <p class="ci-idea">把未来的失败先演练一遍，比事后复盘有用</p>
             <p class="ci-analogy">就像 -- 装修前先假设三个月后你和工头闹翻了，再倒推是哪一条没写进合同</p>
-            <p class="ci-more">点击展开:解释 + 证据 + 证据强度 ▾</p>
+            <p class="ci-more">点击展开：解释 + 证据 + 证据强度 ▾</p>
             <div class="ci-detail">
               <p class="ci-explain">预先检查的做法是：假设项目已经失败，然后集体去找原因。它绕过了乐观偏差，因为不再是评估「会不会失败」，而是解释「为什么失败了」，后一个问题不需要先承认自己悲观。</p>
               <p class="ci-evidence">第6章把它与反向回顾配对：反向回顾从积极的未来往回推，预先检查从负面的未来往回推，前者是啦啦队长，后者是观众席上的起哄者。杜克指出预先检查本质上是默顿「有条理的怀疑性」的实践版，它改变了游戏规则，让提出异议变成一种被期待的行为而不是拆台。</p>
-              <span class="ci-evlevel" data-level="confirmed">证据强度:原文确认</span>
+              <span class="ci-evlevel" data-level="confirmed">证据强度：原文确认</span>
               <a class="ci-teleport" href="#ch-12">出自第 12 章 →</a>
             </div>
           </article>
@@ -1209,13 +1209,13 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
       </div>
     </div>
 
-    <a class="next-cta" data-panel="panel-full">下一步:进入逐章精读 →</a>
+    <a class="next-cta" data-panel="panel-full">下一步：进入逐章精读 →</a>
   </section>
 
-  <!-- ==================== 板块② 逐章精读(目录态) ==================== -->
+  <!-- ==================== 板块② 逐章精读（目录态） ==================== -->
   <section class="panel" id="panel-full">
 
-    <!-- Q5-4 阅读中微型上下文条:章正文占视口时挂 tab 栏下沿显示(IntersectionObserver 驱动,默认 display:none) -->
+    <!-- Q5-4 阅读中微型上下文条：章正文占视口时挂 tab 栏下沿显示（IntersectionObserver 驱动，默认 display:none) -->
     <div class="ch-ctxbar" aria-hidden="true">
       <span class="cx-ch"></span>
       <span class="cx-sep" aria-hidden="true">·</span>
@@ -1225,7 +1225,7 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
 
         <div class="concept-chips">
       <h2 class="section-title">本书关键词</h2>
-      <p class="section-lead">全书反复出现的关键词,点一个看它的准确含义、常见误读与作者立场;带「≠」角标的词常被理解错。</p>
+      <p class="section-lead">全书反复出现的关键词，点一个看它的准确含义、常见误读与作者立场；带「≠」角标的词常被理解错。</p>
       <div class="cc-row">
         <button class="cc-chip cc-has-mis" type="button" data-concept-idx="0" data-concept-chs="3" title="这个词常被理解错">结果导向（resulting）</button>
         <button class="cc-chip cc-has-mis" type="button" data-concept-idx="1" data-concept-chs="3" title="这个词常被理解错">决策质量与结果质量</button>
@@ -1254,118 +1254,118 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
       <div class="cc-pops">
         <div class="cc-pop" data-concept-idx="0">
           <p class="cc-one">用结果的好坏来评价决策的好坏</p>
-          <p class="cc-mis">常见误读:常被理解成「不看结果」，实际是不拿单次结果当评价依据，长期结果仍然要看</p>
-          <p class="cc-stance">作者立场:这是全书要治的第一个病，也是扑克圈里最常被老手警告新人的事</p>
+          <p class="cc-mis">常见误读：常被理解成「不看结果」，实际是不拿单次结果当评价依据，长期结果仍然要看</p>
+          <p class="cc-stance">作者立场：这是全书要治的第一个病，也是扑克圈里最常被老手警告新人的事</p>
         </div>
         <div class="cc-pop" data-concept-idx="1">
           <p class="cc-one">两个独立变量，运气是它们之间的噪声</p>
-          <p class="cc-mis">常见误读:常被读成「决策不重要」，正好相反：正因为结果不可控，决策才需要更严谨</p>
-          <p class="cc-stance">作者立场:分开评价是全部方法的起点</p>
+          <p class="cc-mis">常见误读：常被读成「决策不重要」，正好相反：正因为结果不可控，决策才需要更严谨</p>
+          <p class="cc-stance">作者立场：分开评价是全部方法的起点</p>
         </div>
         <div class="cc-pop" data-concept-idx="2">
           <p class="cc-one">结果出现之后，人会觉得它本来就该发生</p>
-          <p class="cc-mis">常见误读:常被混同于「事后总结」，前者是错觉，后者是方法</p>
-          <p class="cc-stance">作者立场:这是概率思维的死敌，也是所有不诚实复盘的根源</p>
+          <p class="cc-mis">常见误读：常被混同于「事后总结」，前者是错觉，后者是方法</p>
+          <p class="cc-stance">作者立场：这是概率思维的死敌，也是所有不诚实复盘的根源</p>
         </div>
         <div class="cc-pop" data-concept-idx="3">
           <p class="cc-one">一个快、自动、无意识；一个慢、刻意、耗能</p>
-          <p class="cc-mis">常见误读:常被读成「多用理性」，作者的意思是要给理性设计外部脚手架</p>
-          <p class="cc-stance">作者立场:前额皮层容量有限，靠意志力扩大审慎思维是不现实的</p>
+          <p class="cc-mis">常见误读：常被读成「多用理性」，作者的意思是要给理性设计外部脚手架</p>
+          <p class="cc-stance">作者立场：前额皮层容量有限，靠意志力扩大审慎思维是不现实的</p>
         </div>
         <div class="cc-pop" data-concept-idx="4">
           <p class="cc-one">把假的当真的，与把真的当假的</p>
-          <p class="cc-mis">常见误读:常被当成统计学名词，在书里它是「人为什么轻信」的进化解释</p>
-          <p class="cc-stance">作者立场:进化把人类调成了宁可误报的模式，因为漏报会致命</p>
+          <p class="cc-mis">常见误读：常被当成统计学名词，在书里它是「人为什么轻信」的进化解释</p>
+          <p class="cc-stance">作者立场：进化把人类调成了宁可误报的模式，因为漏报会致命</p>
         </div>
         <div class="cc-pop" data-concept-idx="5">
           <p class="cc-one">听到、相信、（偶尔才）验证</p>
-          <p class="cc-mis">常见误读:常被当成懒惰，实际是省认知能量的进化遗产</p>
-          <p class="cc-stance">作者立场:默认先信，是语言出现之前就装好的机制</p>
+          <p class="cc-mis">常见误读：常被当成懒惰，实际是省认知能量的进化遗产</p>
+          <p class="cc-stance">作者立场：默认先信，是语言出现之前就装好的机制</p>
         </div>
         <div class="cc-pop" data-concept-idx="6">
           <p class="cc-one">既有信念决定怎么筛选和处理新信息，新信息又反过来加固信念</p>
-          <p class="cc-mis">常见误读:常被等同于确认偏误，前者强调动机驱动，后者只描述筛选结果</p>
-          <p class="cc-stance">作者立场:它让「查资料」变成「找支持」</p>
+          <p class="cc-mis">常见误读：常被等同于确认偏误，前者强调动机驱动，后者只描述筛选结果</p>
+          <p class="cc-stance">作者立场：它让「查资料」变成「找支持」</p>
         </div>
         <div class="cc-pop" data-concept-idx="7">
           <p class="cc-one">很会看出别人的偏见，看不见自己的</p>
-          <p class="cc-mis">常见误读:常被读成「聪明人更客观」，实验结论恰好相反</p>
-          <p class="cc-stance">作者立场:认知能力越强，盲点越大</p>
+          <p class="cc-mis">常见误读：常被读成「聪明人更客观」，实验结论恰好相反</p>
+          <p class="cc-stance">作者立场：认知能力越强，盲点越大</p>
         </div>
         <div class="cc-pop" data-concept-idx="8">
           <p class="cc-one">自己的好结果是本事，坏结果是运气；别人反过来</p>
-          <p class="cc-mis">常见误读:常被当成单纯的自我美化，实际后果是复盘能力被永久关闭</p>
-          <p class="cc-stance">作者立场:它同时掐掉两类学习机会：自己的失败和别人的成功</p>
+          <p class="cc-mis">常见误读：常被当成单纯的自我美化，实际后果是复盘能力被永久关闭</p>
+          <p class="cc-stance">作者立场：它同时掐掉两类学习机会：自己的失败和别人的成功</p>
         </div>
         <div class="cc-pop" data-concept-idx="9">
           <p class="cc-one">判断这次结果里多少由决策造成、多少由运气造成</p>
-          <p class="cc-mis">常见误读:常被跳过，人们直接进入「下次怎么做」</p>
-          <p class="cc-stance">作者立场:这是从经验中学习的第一道工序，做错就学到反的</p>
+          <p class="cc-mis">常见误读：常被跳过，人们直接进入「下次怎么做」</p>
+          <p class="cc-stance">作者立场：这是从经验中学习的第一道工序，做错就学到反的</p>
         </div>
         <div class="cc-pop" data-concept-idx="10">
           <p class="cc-one">未来的收益在今天的价值要打折</p>
-          <p class="cc-mis">常见误读:常被当成财务概念，其实它解释的是熬夜、拖延和超支</p>
-          <p class="cc-stance">作者立场:折扣率越高，人越短视；夜猫子杰瑞就是高折扣率的化身</p>
+          <p class="cc-mis">常见误读：常被当成财务概念，其实它解释的是熬夜、拖延和超支</p>
+          <p class="cc-stance">作者立场：折扣率越高，人越短视；夜猫子杰瑞就是高折扣率的化身</p>
         </div>
         <div class="cc-pop" data-concept-idx="11">
           <p class="cc-one">坏结果引发情绪，情绪导致更差的决策，如此循环</p>
-          <p class="cc-mis">常见误读:常被当成「心情不好」，书里指的是判断力被生理性关闭的状态</p>
-          <p class="cc-stance">作者立场:它是正反馈环，只能靠预设规则打断</p>
+          <p class="cc-mis">常见误读：常被当成「心情不好」，书里指的是判断力被生理性关闭的状态</p>
+          <p class="cc-stance">作者立场：它是正反馈环，只能靠预设规则打断</p>
         </div>
         <div class="cc-pop" data-concept-idx="12">
           <p class="cc-one">在冷静时给自己上锁，让未来的冲动多一道手续</p>
-          <p class="cc-mis">常见误读:常被理解成「自律」，它的精髓恰恰是不依赖自律</p>
-          <p class="cc-stance">作者立场:用来对抗时间贴现，把理性提前执行</p>
+          <p class="cc-mis">常见误读：常被理解成「自律」，它的精髓恰恰是不依赖自律</p>
+          <p class="cc-stance">作者立场：用来对抗时间贴现，把理性提前执行</p>
         </div>
         <div class="cc-pop" data-concept-idx="13">
           <p class="cc-one">在冲动与行动之间插入一个必须停顿的环节</p>
-          <p class="cc-mis">常见误读:常被当成「想一想」，关键在于是被结构触发的，不是靠记性</p>
-          <p class="cc-stance">作者立场:尤利西斯合约、决策脏话罐、10-10-10 都是它的不同形态</p>
+          <p class="cc-mis">常见误读：常被当成「想一想」，关键在于是被结构触发的，不是靠记性</p>
+          <p class="cc-stance">作者立场：尤利西斯合约、决策脏话罐、10-10-10 都是它的不同形态</p>
         </div>
         <div class="cc-pop" data-concept-idx="14">
           <p class="cc-one">用 10 分钟、10 个月、10 年三个尺度各问一遍</p>
-          <p class="cc-mis">常见误读:常被当成决策清单，它真正的作用是压缩当下的情绪放大效应</p>
-          <p class="cc-stance">作者立场:苏茜·韦尔奇发明，杜克把它当作把未来自己拉进当下的工具</p>
+          <p class="cc-mis">常见误读：常被当成决策清单，它真正的作用是压缩当下的情绪放大效应</p>
+          <p class="cc-stance">作者立场：苏茜·韦尔奇发明，杜克把它当作把未来自己拉进当下的工具</p>
         </div>
         <div class="cc-pop" data-concept-idx="15">
           <p class="cc-one">把每个结果乘上概率，得到预期价值</p>
-          <p class="cc-mis">常见误读:常被当成预测未来，实际是把不确定性换算成可比较的量</p>
-          <p class="cc-stance">作者立场:不做这一步，人就会盯着最大数字而不是最值钱的选项</p>
+          <p class="cc-mis">常见误读：常被当成预测未来，实际是把不确定性换算成可比较的量</p>
+          <p class="cc-stance">作者立场：不做这一步，人就会盯着最大数字而不是最值钱的选项</p>
         </div>
         <div class="cc-pop" data-concept-idx="16">
           <p class="cc-one">从一个已经实现的积极未来往回推，倒找路径</p>
-          <p class="cc-mis">常见误读:常与预先检查混用，方向相反：一个从成功倒推，一个从失败倒推</p>
-          <p class="cc-stance">作者立场:它揭示积极空间，是啦啦队长</p>
+          <p class="cc-mis">常见误读：常与预先检查混用，方向相反：一个从成功倒推，一个从失败倒推</p>
+          <p class="cc-stance">作者立场：它揭示积极空间，是啦啦队长</p>
         </div>
         <div class="cc-pop" data-concept-idx="17">
           <p class="cc-one">假设项目已经失败，集体去找原因</p>
-          <p class="cc-mis">常见误读:常被当成唱衰，它的前提恰恰是承认乐观是默认值</p>
-          <p class="cc-stance">作者立场:它是「有条理的怀疑性」的实践版，把异议变成被期待的行为</p>
+          <p class="cc-mis">常见误读：常被当成唱衰，它的前提恰恰是承认乐观是默认值</p>
+          <p class="cc-stance">作者立场：它是「有条理的怀疑性」的实践版，把异议变成被期待的行为</p>
         </div>
         <div class="cc-pop" data-concept-idx="18">
           <p class="cc-one">听到特定说法就往罐里丢钱，用惩罚提醒自己</p>
-          <p class="cc-mis">常见误读:常被当成玩笑，它是成本极低的决策中断装置</p>
-          <p class="cc-stance">作者立场:一份可自定的语言黑名单：我早就知道、绝对不可能、100%</p>
+          <p class="cc-mis">常见误读：常被当成玩笑，它是成本极低的决策中断装置</p>
+          <p class="cc-stance">作者立场：一份可自定的语言黑名单：我早就知道、绝对不可能、100%</p>
         </div>
         <div class="cc-pop" data-concept-idx="19">
           <p class="cc-one">共有性、普遍性、无私利性、有条理的怀疑性</p>
-          <p class="cc-mis">常见误读:常被当成科学社会学史料，它其实是一份可直接执行的会议规则</p>
-          <p class="cc-stance">作者立场:默顿给科学界写的章程，杜克搬给任何求真小组用</p>
+          <p class="cc-mis">常见误读：常被当成科学社会学史料，它其实是一份可直接执行的会议规则</p>
+          <p class="cc-stance">作者立场：默顿给科学界写的章程，杜克搬给任何求真小组用</p>
         </div>
         <div class="cc-pop" data-concept-idx="20">
           <p class="cc-one">由水平相当、敢于互相打脸的人组成的小组</p>
-          <p class="cc-mis">常见误读:常被当成「多听意见」，关键在于异议的成本要足够低</p>
-          <p class="cc-stance">作者立场:它的功能不是求安慰，是让判断多一道审核</p>
+          <p class="cc-mis">常见误读：常被当成「多听意见」，关键在于异议的成本要足够低</p>
+          <p class="cc-stance">作者立场：它的功能不是求安慰，是让判断多一道审核</p>
         </div>
         <div class="cc-pop" data-concept-idx="21">
           <p class="cc-one">人生每一次决策只发生一次，没有对照组</p>
-          <p class="cc-mis">常见误读:常被忽略，人们把一次经历当成一次实验</p>
-          <p class="cc-stance">作者立场:这是「不能从单次结果学习」的数学根源</p>
+          <p class="cc-mis">常见误读：常被忽略，人们把一次经历当成一次实验</p>
+          <p class="cc-stance">作者立场：这是「不能从单次结果学习」的数学根源</p>
         </div>
         <div class="cc-pop" data-concept-idx="22">
           <p class="cc-one">算法把你已经偏好的内容推得更多</p>
-          <p class="cc-mis">常见误读:常被当成技术问题，书里的重点是它加速了信念固化</p>
-          <p class="cc-stance">作者立场:它让动机性推理从个人习惯变成基础设施</p>
+          <p class="cc-mis">常见误读：常被当成技术问题，书里的重点是它加速了信念固化</p>
+          <p class="cc-stance">作者立场：它让动机性推理从个人习惯变成基础设施</p>
         </div>
       </div>
     </div>
@@ -1710,7 +1710,7 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
 
         <div class="quote-wall">
       <h2 class="section-title">全书金句墙</h2>
-      <p class="section-lead">全书值得带走的话,集中收在这里(章内不再单列金句)。每条带出处,可回原章对照。</p>
+      <p class="section-lead">全书值得带走的话，集中收在这里（章内不再单列金句）。每条带出处，可回原章对照。</p>
       <div class="qw-list">
         <figure class="qw-card qw-featured" data-source="原书第1章 · 约全书12%处">
           <blockquote>决策是对未来的赌注，某一次的结果不能作为衡量决策是否正确的依据。</blockquote>
@@ -1780,7 +1780,7 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
       </div>
     </div>
 
-    <a class="next-cta" data-panel="panel-judge">下一步:看看该信几分 →</a>
+    <a class="next-cta" data-panel="panel-judge">下一步：看看该信几分 →</a>
   </section>
 
   <!-- ==================== 板块③ 批判与评价 ==================== -->
@@ -1792,7 +1792,7 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
     </div>
 
         <div class="arg-restate" data-source="全书 · 论证链">
-      <p class="ar-sub">反驳之前,先复述 -- 这是作者的完整论证</p>
+      <p class="ar-sub">反驳之前，先复述 -- 这是作者的完整论证</p>
       <ol class="arg-steps">
         <li class="arg-step">先承认结果不等于决策</li>
         <span class="arg-arrow" aria-hidden="true">→</span>
@@ -1809,7 +1809,7 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
 
         <div class="tensions">
       <h3 class="zone-title">书里自带的矛盾</h3>
-      <p class="section-lead">作者自己没完全调和的 4 处立场,点一行看它缝合得牢不牢。</p>
+      <p class="section-lead">作者自己没完全调和的 4 处立场，点一行看它缝合得牢不牢。</p>
       <div class="tn-list">
         <article class="tn-row" data-source="内在张力对照">
           <div class="tn-head"><span class="tn-a">全书论证直觉与情绪不可靠，倾斜会让人做出更差的决策</span><span class="tn-vs" aria-hidden="true">⟷</span><span class="tn-b">杜克自己在牌桌上大量依赖读人与直觉，书里也承认顶尖玩家靠的是判断力而不是计算</span></div>
@@ -1863,7 +1863,7 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
 
         <div class="reviews">
       <h3 class="zone-title">别人怎么评</h3>
-      <p class="section-lead">正反都收(全好评 = 信源可疑),每条带来源,保持原始比例。</p>
+      <p class="section-lead">正反都收（全好评 = 信源可疑），每条带来源，保持原始比例。</p>
       <div class="review-cols">
         <div class="review-col review-pos"><h4>赞同</h4>
           <div class="review-item" data-source="https://www.goodreads.com/book/show/35957157.Thinking_in_Bets_Making_Smarter_Decisions_When_You_Don_t_Have_All_the_Facts"><span class="stance">正</span>Goodreads 读者 Eric Lin：这本书严格来说没有开辟新地，《思考，快与慢》已经讲过大部分内容，《信号与噪声》也有类似的东西。但杜克把这些各自被讨论过的现象串成了一个能用的框架，还给了摆脱坏习惯的具体做法。四星给框架，再加一星，因为它替我证明了卡罗尔那次传球是对的。<a class="r-src" href="https://www.goodreads.com/book/show/35957157.Thinking_in_Bets_Making_Smarter_Decisions_When_You_Don_t_Have_All_the_Facts" rel="noopener">来源</a></div>
@@ -1879,7 +1879,7 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
 
         <a class="views-entry" href="#sub-views">
       <span class="ve-kicker">观点对照 · 该信几分</span>
-      <span class="ve-title">核心议题,赞同方与质疑方各说了什么</span>
+      <span class="ve-title">核心议题，赞同方与质疑方各说了什么</span>
       <ul class="ve-list">
         <li>结果不能用来评价决策：好决策可能带来坏结果，坏决策也可能撞上好运气</li>
         <li>生活更像扑克而不是象棋，所以牌桌上的决策法可以搬到职场和家庭</li>
@@ -1889,7 +1889,7 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
       <span class="ve-go">进入观点对照 →</span>
     </a>
 
-    <a class="next-cta" data-panel="panel-action">下一步:读完这么用 →</a>
+    <a class="next-cta" data-panel="panel-action">下一步：读完这么用 →</a>
   </section>
 
   <!-- ==================== 板块④ 行动清单 ==================== -->
@@ -1897,7 +1897,7 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
 
         <div class="chain" data-chain>
       <h2 class="section-title">行动路线图</h2>
-      <p class="section-lead">读完这本书要走的一条路,5 环有先后。点某一环,跳到下方该环的情境规则。</p>
+      <p class="section-lead">读完这本书要走的一条路，5 环有先后。点某一环，跳到下方该环的情境规则。</p>
       <div class="chain-steps">
         <div class="chain-step" data-step="1">
           <div class="cs-head"><span class="cs-no">1</span><span class="cs-label">先给信心打分</span><span class="cs-badge">4 条相关做法</span></div>
@@ -1927,13 +1927,13 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
       </div>
       <div class="chain-loop">
         <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><path class="cl-path" d="M20 6 A 14 14 0 1 1 6 20"/><path class="cl-path" d="M20 6 l-5 -3 M20 6 l-4 5"/></svg>
-        <span>走完第 ⑤ 环,回到第 ① 环,把自己再看一遍</span>
+        <span>走完第 ⑤ 环，回到第 ① 环，把自己再看一遍</span>
       </div>
     </div>
 
         <div class="rules">
       <h2 class="section-title">情境决策卡</h2>
-      <p class="section-lead">遇到具体情况怎么办 -- 按行动环或情境筛,每条「当/做/因为」三行全可见。</p>
+      <p class="section-lead">遇到具体情况怎么办 -- 按行动环或情境筛，每条「当/做/因为」三行全可见。</p>
       <div class="rule-chips">
         <span class="rc-group-label">按行动环筛选</span>
         <button class="rc-chip on" type="button" data-filter-step="all">全部</button>
@@ -2046,7 +2046,7 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
 
         <div class="models">
       <h2 class="section-title">心智模型工具架</h2>
-      <p class="section-lead">作者反复使用的思考透镜。点开一张,看怎么用、书里依据、以及什么时候失效。</p>
+      <p class="section-lead">作者反复使用的思考透镜。点开一张，看怎么用、书里依据、以及什么时候失效。</p>
       <div class="model-list">
         <article class="model-drawer" data-source="全书 · 心智模型">
           <button class="md-head" type="button"><span class="md-name">把决策和结果放在两条轴上，而不是一条</span><span class="md-essence">每次评价一个决定，先在纸上写两栏：决策时我知道什</span><span class="md-toggle">展开 ▾</span></button>
@@ -2109,7 +2109,7 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
 
         <div class="questions-wrap">
       <h2 class="section-title">读完自检</h2>
-      <p class="section-lead">这几个问题,建议每隔一段时间回来问自己一遍(纯浏览,无打分)。</p>
+      <p class="section-lead">这几个问题，建议每隔一段时间回来问自己一遍（纯浏览，无打分）。</p>
       <div class="questions">
         <article class="question" data-source="原书第1章 · 约全书5%处">
           <div>
@@ -2156,7 +2156,7 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
       </div>
     </div>
 
-    <a class="next-cta" data-panel="panel-extend">下一步:接着读什么 →</a>
+    <a class="next-cta" data-panel="panel-extend">下一步：接着读什么 →</a>
   </section>
 
   <!-- ==================== 板块⑤ 延伸阅读 ==================== -->
@@ -2164,43 +2164,43 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
 
         <div class="similar">
       <h2 class="section-title">同类书</h2>
-      <p class="section-lead">读完这本接着读的书,标出与本书的关系:印证 / 互补 / 纠偏。</p>
+      <p class="section-lead">读完这本接着读的书，标出与本书的关系：印证 / 互补 / 纠偏。</p>
       <div class="sim-grid">
         <article class="sim-card" data-sim-idx="1" data-source="延伸阅读建议">
           <h3>《思考，快与慢》（Thinking, Fast and Slow） <span class="sim-rel rel-support">印证</span></h3>
           <p class="sim-author">丹尼尔·卡尼曼，中信出版社</p>
           <p class="sim-why">杜克整本书的地基都在这本书里：系统 1 与系统 2 的分工、损失规避、以及对「人无法靠意志力去偏」的判断。差别在于卡尼曼是描述，杜克是给动作：卡尼曼告诉你系统 1 会骗你，杜克告诉你在牌桌上被骗一次要付多少钱，以及下一手该怎么做。</p>
-          <p class="sim-fit"><strong>适合谁:</strong>适合想先把认知偏误的机制弄清楚、再接受杜克那套处方的人。</p>
+          <p class="sim-fit"><strong>适合谁：</strong>适合想先把认知偏误的机制弄清楚、再接受杜克那套处方的人。</p>
         </article>
         <article class="sim-card" data-sim-idx="2" data-source="延伸阅读建议">
           <h3>《超预测》（Superforecasting） <span class="sim-rel rel-extend">补充</span></h3>
           <p class="sim-author">菲利普·泰特洛克、丹·加德纳，中信出版社 2016</p>
           <p class="sim-why">杜克主张把信心写成百分比，但没给校准方法；泰特洛克补上了这一块：用布莱尔分数给每一次预测打分，靠反馈把「六成把握」练准。他还证明了一件事杜克没证明的：概率判断能力可以被训练，而且可测量。</p>
-          <p class="sim-fit"><strong>适合谁:</strong>适合读完本书后觉得「我知道要报概率，但报不准」的人。</p>
+          <p class="sim-fit"><strong>适合谁：</strong>适合读完本书后觉得「我知道要报概率，但报不准」的人。</p>
         </article>
         <article class="sim-card" data-sim-idx="3" data-source="延伸阅读建议">
           <h3>《信号与噪声》（The Signal and the Noise） <span class="sim-rel rel-support">印证</span></h3>
           <p class="sim-author">纳特·西尔弗，中信出版社</p>
           <p class="sim-why">西尔弗是书里真实出现过的人物：2016 年大选前他给特朗普的胜算是 30% 到 40%，结果出来后被大量读者指责预测失败。杜克拿这件事说明概率预测无法被单次结果否证，西尔弗自己在书里讲的是同一件事的另一面：怎么从噪声里把信号筛出来。</p>
-          <p class="sim-fit"><strong>适合谁:</strong>适合关心预测、概率与媒体解读的人。</p>
+          <p class="sim-fit"><strong>适合谁：</strong>适合关心预测、概率与媒体解读的人。</p>
         </article>
         <article class="sim-card" data-sim-idx="4" data-source="延伸阅读建议">
           <h3>《黑天鹅》（The Black Swan） <span class="sim-rel rel-rebut">反驳</span></h3>
           <p class="sim-author">纳西姆·塔勒布，中信出版社</p>
           <p class="sim-why">两人都承认世界不可知，但方向相反。杜克要求你把信念压缩成一个百分比，好让它可被更新、可被下注；塔勒布认为恰恰是这种压缩制造了安全感，让人低估尾部事件的破坏力。读这两本放在一起，能看清「量化不确定性」这件事本身的边界。</p>
-          <p class="sim-fit"><strong>适合谁:</strong>适合已经开始用概率说话、需要有人提醒代价的人。</p>
+          <p class="sim-fit"><strong>适合谁：</strong>适合已经开始用概率说话、需要有人提醒代价的人。</p>
         </article>
         <article class="sim-card" data-sim-idx="5" data-source="延伸阅读建议">
           <h3>《噪声》（Noise） <span class="sim-rel rel-extend">补充</span></h3>
           <p class="sim-author">丹尼尔·卡尼曼、奥利维耶·西博尼、卡斯·桑斯坦，中信出版社 2021</p>
           <p class="sim-why">杜克讲团体纠偏，靠的是多样性带来的观点差异；卡尼曼他们补上了另一半：同样是合格的判断者，在不同时间、不同心情下给出的答案也会随机分散，这叫噪声，跟偏见不是一回事，需要另一套「决策卫生」来治。</p>
-          <p class="sim-fit"><strong>适合谁:</strong>适合管理团队、要做评审和面试的人。</p>
+          <p class="sim-fit"><strong>适合谁：</strong>适合管理团队、要做评审和面试的人。</p>
         </article>
         <article class="sim-card" data-sim-idx="6" data-source="延伸阅读建议">
           <h3>《决断力》（Decisive） <span class="sim-rel rel-extend">补充</span></h3>
           <p class="sim-author">奇普·希思、丹·希思，中信出版社</p>
           <p class="sim-why">万维钢在中文版序里就点了这本书作为对照：同样讲科学决策，希思兄弟给的是四个流程动作（拓宽选项、验证假设、拉开距离、做好预案），杜克给的是概率语言和牌桌验证。前者更好用，后者更根本。</p>
-          <p class="sim-fit"><strong>适合谁:</strong>适合想要一份会议可用清单的人。</p>
+          <p class="sim-fit"><strong>适合谁：</strong>适合想要一份会议可用清单的人。</p>
         </article>
       </div>
     </div>
@@ -2254,7 +2254,7 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
 
         <div class="cross-domain">
       <h3 class="zone-title">这套思想在别处叫什么</h3>
-      <p class="section-lead">把书里的核心思想挂到你已有的知识域上 -- 换个学科,它其实早有名字。</p>
+      <p class="section-lead">把书里的核心思想挂到你已有的知识域上 -- 换个学科，它其实早有名字。</p>
       <div class="xd-list">
         <div class="xd-item" data-source="跨域对照"><span class="xd-domain">认知心理学</span><span class="xd-name">反射思维与审慎思维</span><span class="xd-note">卡尼曼的系统 1 与系统 2，加上马库斯的反射与审慎两分，是全书解释「为什么明知却做不到」的底层机制</span></div>
         <div class="xd-item" data-source="跨域对照"><span class="xd-domain">博弈论</span><span class="xd-name">不完全信息博弈</span><span class="xd-note">冯·诺依曼 1944 年《博弈论与经济行为》以扑克为原型，杜克据此把日常决策重新定义为下注</span></div>
@@ -2266,7 +2266,7 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
 
         <div class="crossbook">
       <h3 class="zone-title">这本书在别的书里的回声</h3>
-      <p class="section-lead">同一概念在别的书里被印证 / 反驳,跨书越蒸越富。</p>
+      <p class="section-lead">同一概念在别的书里被印证 / 反驳，跨书越蒸越富。</p>
       <div class="xb-list">
         <div class="xb-echo" data-source="外部书对照"><span class="tag">SUPPORTS</span>校准（把信心写成概率之后，怎么知道报得准不准） 在 《《超预测》（菲利普·泰特洛克、丹·加德纳）》 -- 同向但更硬。杜克停在「说出你的百分比」，泰特洛克把这件事变成了一门可以打分的技能：用布莱尔分数给每次预测结算，靠成千上万次带反馈的预测把校准练出来。他证明了杜克没有证明的那一步：概率判断能力可以被训练，而且可以测量。</div>
         <div class="xb-echo" data-source="外部书对照"><span class="tag">SUPPORTS</span>预先检查（premortem） 在 《加里·克莱因《进行项目预检》，哈佛商业评论 2007 年 9 月》 -- 原始出处，而且理由比杜克写的更社会学。克莱因的重点不是「逆向思考更准」，而是「让有顾虑的人有一个安全的说法把话说出来」：正常会议上指出漏洞像是在批评写方案的人，而在预检里找漏洞就是任务本身。他引的 1989 年研究（Mitchell、Russo、Pennington）发现，把事件设想成已经发生，能让人给出的原因数量增加约 30% -- 注意，是数量，不是准确度。</div>
@@ -2277,7 +2277,7 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
     </div>
 
         <div class="takeaway-strip">
-      <p class="tw-head">离开前带走:</p>
+      <p class="tw-head">离开前带走：</p>
       <p class="tw-formula"><span class="tw-eq">好决策 = 准确的信念 × 概率化的下注 - 结果导向</span><span class="tw-tag">① 见过 · 回顾</span></p>
       <div class="tw-rings">
         <a class="tw-ring" data-panel="panel-action">先给信心打分</a>
@@ -2292,11 +2292,11 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
   </section>
 
     <footer class="footer">
-    本页由 sansheng-distill 从《对赌：信息不足时如何做出高明决策》(安妮·杜克)蒸馏重组而成 -- 保留作者精确命名,出处页码按章节位置比例估算。
-    AI 蒸馏是地图,不是目的地 -- 关键章节请回原书细看。出处随文常显小灰字,右下角可切换 7 套主题。
+    本页由 sansheng-distill 从《对赌：信息不足时如何做出高明决策》（安妮·杜克）蒸馏重组而成 -- 保留作者精确命名，出处页码按章节位置比例估算。
+    AI 蒸馏是地图，不是目的地 -- 关键章节请回原书细看。出处随文常显小灰字，右下角可切换 7 套主题。
   </footer>
 
-  <!-- 主题切换器: 默认收起,点开弹层;菜单第一颗为非默认主题 brand-dark(深空),warm-paper 靠后(verify 冒烟依赖,勿重排) -->
+  <!-- 主题切换器： 默认收起，点开弹层；菜单第一颗为非默认主题 brand-dark（深空），warm-paper 靠后（verify 冒烟依赖，勿重排） -->
   <div class="theme-picker" role="group" aria-label="切换主题" data-open="0">
     <div class="tp-menu" role="menu">
       <button data-theme-pick="brand-dark" role="menuitemradio"><span class="sw" aria-hidden="true"></span>深空</button>
@@ -2310,10 +2310,10 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
     <button class="tp-trigger" type="button" aria-haspopup="true" aria-expanded="false"><span class="tp-ico" aria-hidden="true">🎨</span><span class="tp-label">主题</span><svg class="tp-caret" width="9" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
   </div>
 
-  <!-- ========== 页内子视图(2 张,</main> 前 · panel 外 · 全屏覆盖 · hidden 默认;hash 路由 #sub-* 开合)
+  <!-- ========== 页内子视图（2 张，</main> 前 · panel 外 · 全屏覆盖 · hidden 默认；hash 路由 #sub-* 开合）
        入口 = hero 作者名 <a href="#sub-author"> + ⑤作者书架栏头链 + ③观点对照入口卡 <a href="#sub-views">
-       可降级: author_page===null → #sub-author + 全部入口删;views_page===null → #sub-views + 入口卡删
-       hidden 属性别删(删了子视图默认展开盖住全页)。同类书子视图 v3 已删(内联板块⑤)。 ========== -->
+       可降级： author_page===null → #sub-author + 全部入口删；views_page===null → #sub-views + 入口卡删
+       hidden 属性别删（删了子视图默认展开盖住全页）。同类书子视图 v3 已删（内联板块⑤)。 ========== -->
 
     <section class="subpage" id="sub-author" hidden aria-label="作者页">
     <div class="subpage-inner">
@@ -2374,7 +2374,7 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
 值得注意的是，这本书在中文世界的接受度和英文世界有明显温差。英文版 Goodreads 3.81，属于「好书但不算杰作」的区间，差评集中在两点：观点多是卡尼曼和吉尔伯特的重新包装、后半本重复。中文版豆瓣 7.2，读者更认它的实用价值，万维钢的推荐序把「不以成败论英雄」这条讲得很透，也把这本书的定位从决策科学拉到了人生修炼。</p>
           </section>
           <section class="au-sec" id="au-debate">
-            <h3 class="au-sec-title">争议与评价 -- 劝人别买房,这话站得住吗</h3>
+            <h3 class="au-sec-title">争议与评价 -- 劝人别买房，这话站得住吗</h3>
             <div class="au-debate-cols">
               <div class="au-dcol au-dcol-pro"><h4>赞同</h4>
                 <article class="au-dentry"><p>「普通人关注结果，高手关注系统，这是科学决策的基本功。」他把全书概括为四个动作：严肃对待信念、不以成败论高低、学会复盘、克服自利性偏差。</p></article>
@@ -2405,7 +2405,7 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
               <li class="au-work"><span class="au-wyear">2011</span><div><strong>《Decide to Play Great Poker》</strong><p>与约翰·沃豪斯合著的无上限德州扑克策略书，只在扑克圈流通。</p></div></li>
             </ol>
           </section>
-          <div class="sp-srcs">来源:<a class="r-src" href="https://www.annieduke.com/about/" rel="noopener">来源</a> · <a class="r-src" href="https://www.wikiwand.com/en/articles/Annie_Duke" rel="noopener">来源</a> · <a class="r-src" href="https://poker.fandom.com/wiki/Annie_Duke" rel="noopener">来源</a> · <a class="r-src" href="https://notablepeopleproject.org/annie_duke" rel="noopener">来源</a> · <a class="r-src" href="https://www.goodreads.com/book/show/35957157.Thinking_in_Bets_Making_Smarter_Decisions_When_You_Don_t_Have_All_the_Facts" rel="noopener">来源</a> · <a class="r-src" href="https://mjburrows.com/library/thinking-in-bets/" rel="noopener">来源</a> · <a class="r-src" href="https://perceptionpoints.com/thinking-in-bets" rel="noopener">来源</a></div>
+          <div class="sp-srcs">来源：<a class="r-src" href="https://www.annieduke.com/about/" rel="noopener">来源</a> · <a class="r-src" href="https://www.wikiwand.com/en/articles/Annie_Duke" rel="noopener">来源</a> · <a class="r-src" href="https://poker.fandom.com/wiki/Annie_Duke" rel="noopener">来源</a> · <a class="r-src" href="https://notablepeopleproject.org/annie_duke" rel="noopener">来源</a> · <a class="r-src" href="https://www.goodreads.com/book/show/35957157.Thinking_in_Bets_Making_Smarter_Decisions_When_You_Don_t_Have_All_the_Facts" rel="noopener">来源</a> · <a class="r-src" href="https://mjburrows.com/library/thinking-in-bets/" rel="noopener">来源</a> · <a class="r-src" href="https://perceptionpoints.com/thinking-in-bets" rel="noopener">来源</a></div>
         </div>
       </div>
     </div>
@@ -2419,10 +2419,10 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
         <span class="subpage-from">《对赌：信息不足时如何做出高明决策》· 延伸档案</span>
       </div>
       <div class="subpage-body">
-        <p class="sp-lead">书中核心主张的赞同方 / 质疑方对照,每条带来源;真一边倒则如实留另一边为空。</p>
+        <p class="sp-lead">书中核心主张的赞同方 / 质疑方对照，每条带来源；真一边倒则如实留另一边为空。</p>
         <article class="view-topic">
           <h3 class="vt-viewpoint">结果不能用来评价决策：好决策可能带来坏结果，坏决策也可能撞上好运气</h3>
-          <p class="vt-focus">争议焦点:这个判断有没有反例,双方各执一端。</p>
+          <p class="vt-focus">争议焦点：这个判断有没有反例，双方各执一端。</p>
           <div class="vt-cols">
             <div class="vt-col vt-support"><p class="vt-col-label">赞同方</p>
               <div class="vt-entry" data-source="http://mp.weixin.qq.com/s?__biz=MjM5NTkzMjY1Mw==&amp;mid=2651902810&amp;idx=3&amp;sn=3c44e57099d3473b2441e5fa26bfcf54"><p class="vt-who">万维钢（中文版序言）</p><p class="vt-say">「普通人关注结果，高手关注系统，这是科学决策的基本功。」他举的例子是 2004 年那场慈善赛：杜克说 24% 的选手赢了，观众喊她算错了，她的回答是「我说的是 24%，不是 0」。</p><a class="r-src" href="http://mp.weixin.qq.com/s?__biz=MjM5NTkzMjY1Mw==&amp;mid=2651902810&amp;idx=3&amp;sn=3c44e57099d3473b2441e5fa26bfcf54" rel="noopener">来源</a></div>
@@ -2437,7 +2437,7 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
         </article>
         <article class="view-topic">
           <h3 class="vt-viewpoint">生活更像扑克而不是象棋，所以牌桌上的决策法可以搬到职场和家庭</h3>
-          <p class="vt-focus">争议焦点:这个判断有没有反例,双方各执一端。</p>
+          <p class="vt-focus">争议焦点：这个判断有没有反例，双方各执一端。</p>
           <div class="vt-cols">
             <div class="vt-col vt-support"><p class="vt-col-label">赞同方</p>
               <div class="vt-entry" data-source="https://www.annieduke.com/about/"><p class="vt-who">安妮·杜克本人（第 1 章）</p><p class="vt-say">「象棋不是博弈。象棋是一种定义明确的计算形式。」她引冯·诺依曼在伦敦出租车上的话，说明真实生活里有虚张声势、有欺诈、有隐藏信息，和扑克同构。</p><a class="r-src" href="https://www.annieduke.com/about/" rel="noopener">来源</a></div>
@@ -2452,7 +2452,7 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
         </article>
         <article class="view-topic">
           <h3 class="vt-viewpoint">把信心写成百分比（我有六成把握），是普通人也能练的认知习惯</h3>
-          <p class="vt-focus">争议焦点:这个判断有没有反例,双方各执一端。</p>
+          <p class="vt-focus">争议焦点：这个判断有没有反例，双方各执一端。</p>
           <div class="vt-cols">
             <div class="vt-col vt-support"><p class="vt-col-label">赞同方</p>
               <div class="vt-entry" data-source="https://www.annieduke.com/about/"><p class="vt-who">安妮·杜克本人（第 2 章）</p><p class="vt-say">她给出 0 到 10 的直接打分法，并指出说出「八成把握」会让别人更愿意补充信息，因为不必用「你错了」的方式开口。</p><a class="r-src" href="https://www.annieduke.com/about/" rel="noopener">来源</a></div>
@@ -2468,7 +2468,7 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
         </article>
         <article class="view-topic">
           <h3 class="vt-viewpoint">找三五个敢反驳你的人组成求真团体，靠责任性和异议纠偏</h3>
-          <p class="vt-focus">争议焦点:这个判断有没有反例,双方各执一端。</p>
+          <p class="vt-focus">争议焦点：这个判断有没有反例，双方各执一端。</p>
           <div class="vt-cols">
             <div class="vt-col vt-support"><p class="vt-col-label">赞同方</p>
               <div class="vt-entry" data-source="https://perceptionpoints.com/thinking-in-bets"><p class="vt-who">书评站 PerceptionPoints</p><p class="vt-say">「决策小组框架对任何规模的团队都可以立刻上手：三到六个人，彼此按过程而不是结果评价决定，把抽象的贝叶斯思维变成了一件团队可以执行的事。」</p><a class="r-src" href="https://perceptionpoints.com/thinking-in-bets" rel="noopener">来源</a></div>
@@ -2481,24 +2481,24 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
             </div>
           </div>
         </article>
-        <p class="sp-srcs">来源:<a class="r-src" href="http://mp.weixin.qq.com/s?__biz=MjM5NTkzMjY1Mw==&amp;mid=2651902810&amp;idx=3&amp;sn=3c44e57099d3473b2441e5fa26bfcf54" rel="noopener">来源</a> · <a class="r-src" href="https://mjburrows.com/library/thinking-in-bets/" rel="noopener">来源</a> · <a class="r-src" href="http://pj-paul.com/books/2020/12/15/duke_thinking_bets.html" rel="noopener">来源</a> · <a class="r-src" href="https://perceptionpoints.com/thinking-in-bets" rel="noopener">来源</a> · <a class="r-src" href="http://leelily.me/2021/09/17/thinkinginbets-by-annie-duke" rel="noopener">来源</a> · <a class="r-src" href="https://expectedvalue.co.uk/blog/thinking-in-bets-annie-duke" rel="noopener">来源</a> · <a class="r-src" href="https://douc.cc/1JhtXW" rel="noopener">来源</a></p>
+        <p class="sp-srcs">来源：<a class="r-src" href="http://mp.weixin.qq.com/s?__biz=MjM5NTkzMjY1Mw==&amp;mid=2651902810&amp;idx=3&amp;sn=3c44e57099d3473b2441e5fa26bfcf54" rel="noopener">来源</a> · <a class="r-src" href="https://mjburrows.com/library/thinking-in-bets/" rel="noopener">来源</a> · <a class="r-src" href="http://pj-paul.com/books/2020/12/15/duke_thinking_bets.html" rel="noopener">来源</a> · <a class="r-src" href="https://perceptionpoints.com/thinking-in-bets" rel="noopener">来源</a> · <a class="r-src" href="http://leelily.me/2021/09/17/thinkinginbets-by-annie-duke" rel="noopener">来源</a> · <a class="r-src" href="https://expectedvalue.co.uk/blog/thinking-in-bets-annie-duke" rel="noopener">来源</a> · <a class="r-src" href="https://douc.cc/1JhtXW" rel="noopener">来源</a></p>
       </div>
     </div>
   </section>
 </main>
 
 <script>
-/* 交互层: 自绘 SVG 脑图(懒渲染, 恒深色不随页面主题) + hash 路由(切tab/开手风琴章/滚动/高亮)。
-   v4.1: 脑图换自绘 SVG(读 nodeData 出图, 无 vendor),点二级 a.jump -> location.hash -> initHashRouter 接管。hash #ch-N 走 window.__bdOpenChapter。 */
+/* 交互层： 自绘 SVG 脑图（懒渲染， 恒深色不随页面主题） + hash 路由（切tab/开手风琴章/滚动/高亮）。
+   v4.1: 脑图换自绘 SVG（读 nodeData 出图， 无 vendor)，点二级 a.jump -> location.hash -> initHashRouter 接管。hash #ch-N 走 window.__bdOpenChapter。 */
 (() => {
   'use strict';
   window.__bdInitExtra = function(activateTab){
     initMindmap(); initSketch(); initHashRouter(activateTab);
   };
-  /* 因果骨架草图(v4,Q4-2):读 #bd-sketch-data 的 {type,caption,nodes[],edges[]} -> 纵向分层布局(最长路径分层,
-     源节点在顶、逐层向下)-> 生成内联 SVG(圆角描边节点 + 父子直角肘形折线,零交互静态一屏)。
-     直角经典 + 浅色配色:色全走 CSS 类(.sk-node/.sk-mid/.sk-line/.sk-label/.sk-elabel/.sk-arrow),JS 只设几何,零内联 hex。
-     通用生成器,换书换 #bd-sketch-data 即出图;数据缺 / 节点 <2 -> 隐藏整块。 */
+  /* 因果骨架草图（v4,Q4-2)：读 #bd-sketch-data 的 {type,caption,nodes[],edges[]} -> 纵向分层布局（最长路径分层，
+     源节点在顶、逐层向下）-> 生成内联 SVG（圆角描边节点 + 父子直角肘形折线，零交互静态一屏）。
+     直角经典 + 浅色配色：色全走 CSS 类（.sk-node/.sk-mid/.sk-line/.sk-label/.sk-elabel/.sk-arrow),JS 只设几何，零内联 hex。
+     通用生成器，换书换 #bd-sketch-data 即出图；数据缺 / 节点 <2 -> 隐藏整块。 */
   function initSketch(){
     const wrap = document.querySelector('.napkin-sketch');
     if (!wrap) return;
@@ -2511,7 +2511,7 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
     if (nodes.length < 2){ wrap.style.display = 'none'; return; }
     const SVGNS = 'http://www.w3.org/2000/svg';
     const byId = {}; nodes.forEach(n => { byId[n.id] = n; });
-    // 分层:最长路径(源在 0 层,沿边 +1;带上限防环)
+    // 分层：最长路径（源在 0 层，沿边 +1；带上限防环）
     const layer = {}; nodes.forEach(n => { layer[n.id] = 0; });
     const N = nodes.length;
     for (let it = 0; it < N + 2; it++){
@@ -2525,11 +2525,11 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
     // 按层分组、层内保持数据顺序
     const layers = {}; let maxL = 0;
     nodes.forEach(n => { const L = layer[n.id]; (layers[L] = layers[L] || []).push(n); if (L > maxL) maxL = L; });
-    // 尺寸(CJK ~ 字号宽);节点宽随 label 自适应
-    // 横向布局(sandy:横向从左到右、压低高度):层=列(x 递增),列内纵向堆叠居中
+    // 尺寸（CJK ~ 字号宽）；节点宽随 label 自适应
+    // 横向布局（sandy：横向从左到右、压低高度）：层=列（x 递增），列内纵向堆叠居中
     const FS = 11, CH = 15.2, PADX = 15, NH = 38, VGAP = 14, HGAP = 40, PAD = 12;
     const wOf = n => Math.max(66, String(n.label || '').length * CH + PADX * 2);
-    // 每列宽=该列最宽节点;记最高列(节点最多)定画布高
+    // 每列宽=该列最宽节点；记最高列（节点最多）定画布高
     const colW = {}; let maxColH = 0;
     for (let L = 0; L <= maxL; L++){
       const row = layers[L] || [];
@@ -2540,7 +2540,7 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
     // 列 x 累加
     const colX = {}; let xacc = PAD;
     for (let L = 0; L <= maxL; L++){ colX[L] = xacc; xacc += colW[L] + HGAP; }
-    // 定位:列内纵向居中,x=列位
+    // 定位：列内纵向居中，x=列位
     const pos = {};
     for (let L = 0; L <= maxL; L++){
       const row = layers[L] || [];
@@ -2556,7 +2556,7 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
     svg.setAttribute('role', 'img');
     svg.setAttribute('aria-label', String((d && d.caption) || '全书因果骨架图'));
     const mk = (t, a) => { const el = document.createElementNS(SVGNS, t); for (const k in a) el.setAttribute(k, a[k]); return el; };
-    // 边:横向直角肘(源右缘 -> 横 -> 竖 -> 横 -> 目标左缘);向右箭头。标签延后统一渲染(压在所有引线之上、节点之下,避免被后画的线穿过)
+    // 边：横向直角肘（源右缘 -> 横 -> 竖 -> 横 -> 目标左缘）；向右箭头。标签延后统一渲染（压在所有引线之上、节点之下，避免被后画的线穿过）
     const elabels = [];
     edges.forEach(e => {
       const A = pos[e.from], B = pos[e.to];
@@ -2565,20 +2565,20 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
       const midX = (x1 + x2) / 2;
       const pts = (y1 === y2) ? `${x1},${y1} ${x2},${y2}` : `${x1},${y1} ${midX},${y1} ${midX},${y2} ${x2},${y2}`;
       svg.appendChild(mk('polyline', { points: pts, class: 'sk-line' }));
-      const ah = 5;                                    // 向右小箭头(目标左缘)
+      const ah = 5;                                    // 向右小箭头（目标左缘）
       svg.appendChild(mk('path', { d: `M ${x2 - ah} ${y2 - ah} L ${x2 - ah} ${y2 + ah} L ${x2} ${y2} Z`, class: 'sk-arrow' }));
       const lab = (e.label || '').trim();
       if (lab) elabels.push({ lab: lab, x: midX, ly: (y1 === y2) ? y1 : (y1 + y2) / 2 });
     });
-    // 转换标签:纯文字挪到引线上方(不套框、不压箭头);延后渲染压在所有引线之上
+    // 转换标签：纯文字挪到引线上方（不套框、不压箭头）；延后渲染压在所有引线之上
     elabels.forEach(b => {
       const t = mk('text', { x: b.x, y: b.ly - 6, class: 'sk-elabel', 'text-anchor': 'middle' });
       t.textContent = b.lab; svg.appendChild(t);
     });
-    // 终点节点(有入边无出边)= 视觉落点深绿实底;中间产物 = 金实底;其余 = 浅底描边
+    // 终点节点（有入边无出边）= 视觉落点深绿实底；中间产物 = 金实底；其余 = 浅底描边
     const hasOut = {}, hasIn = {};
     edges.forEach(e => { hasOut[e.from] = true; hasIn[e.to] = true; });
-    // 节点:三阶实底 + 居中文字(mid/end 用白字)
+    // 节点：三阶实底 + 居中文字（mid/end 用白字）
     nodes.forEach(n => {
       const p = pos[n.id]; if (!p) return;
       const isEnd = !n.mid && hasIn[n.id] && !hasOut[n.id];
@@ -2596,10 +2596,10 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
     }
     host.appendChild(svg);
   }
-  /* 全书脑图:自绘 SVG 深色版(v4.1,替换 mind-elixir)。读内嵌 #bd-mindmap-data 的 nodeData 通用出图 --
-     tidy-tree 确定性布局 -> SVG 挂线节点(root 卡片 / 一级金奶油 / 二级双层[关键词+判断句+章码chip] / 三四级 emoji 前缀纯文字)
-     + 父子直角肘形梳齿引线(不画任何关联箭头/收纳虚线) + viewBox 缩放 viewer(连续指数 wheel/光标锚点/拖动不选中/pinch/双击复位/全屏/章码跳章)。
-     配色统一读 --mm-* dark token(与 CSS 同一套,零 hex 单一来源);nodeData 之外零硬编码,换书换数据即出图。 */
+  /* 全书脑图：自绘 SVG 深色版（v4.1，替换 mind-elixir)。读内嵌 #bd-mindmap-data 的 nodeData 通用出图 --
+     tidy-tree 确定性布局 -> SVG 挂线节点（root 卡片 / 一级金奶油 / 二级双层[关键词+判断句+章码chip] / 三四级 emoji 前缀纯文字）
+     + 父子直角肘形梳齿引线（不画任何关联箭头/收纳虚线） + viewBox 缩放 viewer（连续指数 wheel/光标锚点/拖动不选中/pinch/双击复位/全屏/章码跳章）。
+     配色统一读 --mm-* dark token（与 CSS 同一套，零 hex 单一来源）;nodeData 之外零硬编码，换书换数据即出图。 */
   function initMindmap(){
     const wrap = document.querySelector('.bd-mindmap-wrap');
     const vp   = document.getElementById('bd-mindmap');
@@ -2608,13 +2608,13 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
     let stage = vp.querySelector('.mm-stage');
     if (!stage) { stage = document.createElement('div'); stage.className = 'mm-stage'; vp.insertBefore(stage, vp.firstChild); }
     let raw; try { raw = JSON.parse(dataEl.textContent); } catch (e) { return; }
-    const DATA = (raw && raw.nodeData) ? raw.nodeData : raw;      // 通用:只认 nodeData,arrows/summaries 一律忽略(SVG 版不画关联)
+    const DATA = (raw && raw.nodeData) ? raw.nodeData : raw;      // 通用：只认 nodeData,arrows/summaries 一律忽略（SVG 版不画关联）
     if (!DATA || !DATA.topic) return;
 
     const SVGNS = 'http://www.w3.org/2000/svg';
     const SERIF = '"Source Han Serif SC","Noto Serif SC","Songti SC","STSong","SimSun",Georgia,serif';
     const SANS  = '"Source Han Sans SC","Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif';
-    // 深色配色:统一读 --mm-* dark token(CSS 定义、JS getComputedStyle 读同一套 -> 零 hex 单一来源;fallback 仅兜底)
+    // 深色配色：统一读 --mm-* dark token(CSS 定义、JS getComputedStyle 读同一套 -> 零 hex 单一来源；fallback 仅兜底）
     const cs = getComputedStyle(wrap);
     const T = (n, fb) => { const v = (cs.getPropertyValue(n) || '').trim(); return v || fb; };
     const C = {
@@ -2624,7 +2624,7 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
       line:T('--mm-line','#5f8579'),
       chipBg:T('--mm-chip-bg','rgba(143,208,191,0.15)'), chipBd:T('--mm-chip-bd','rgba(143,208,191,0.32)'), chipTx:T('--mm-chip-tx','#bfe0d3')
     };
-    const LEAD = 16;   // 引线末端 -> 文字留白(文字纯挂线,不套框)
+    const LEAD = 16;   // 引线末端 -> 文字留白（文字纯挂线，不套框）
 
     // 文本度量 + CJK 逐字换行
     const mctx = document.createElement('canvas').getContext('2d');
@@ -2635,7 +2635,7 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
       if (cur !== '') lines.push(cur); return lines.length ? lines : [''];
     }
 
-    // 建树 + 逐节点定尺(root=卡片,其余=纯文字挂线)
+    // 建树 + 逐节点定尺（root=卡片，其余=纯文字挂线）
     function buildNode(rw, depth){
       const n = { id: rw.id, topic: rw.topic || '', depth, tags: rw.tags || null, hyperLink: rw.hyperLink || null, children: [], root: !!rw.root };
       (rw.children || []).forEach(c => n.children.push(buildNode(c, depth + 1)));
@@ -2645,7 +2645,7 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
       const d = n.depth;
       if (d === 0) { const font = '700 22px ' + SERIF, pad = 16, tw = measure(n.topic, font); Object.assign(n, { w: tw + pad * 2, h: 30 + pad * 2, pad, font, kind: 'root' }); return; }
       if (d === 1) { const font = '700 16.5px ' + SERIF, lh = 24, tw = measure(n.topic, font); Object.assign(n, { w: LEAD + tw + 2, h: lh, font, lh, lines: [n.topic], color: C.sec, kind: 'sec' }); return; }
-      if (d === 2) { // 二级双层:关键词(米白) + 判断句(浅青) + 章码 chip,整块挂线
+      if (d === 2) { // 二级双层：关键词（米白） + 判断句（浅青） + 章码 chip，整块挂线
         const kwFont = '700 15px ' + SERIF, jFont = '400 12.5px ' + SANS, chFont = '600 10.5px ' + SANS, jMax = 420;
         const judge = n.tags ? (n.tags[0] || '') : '', chap = n.tags ? (n.tags[1] || '') : '';
         const kwW = measure(n.topic, kwFont), jLines = wrapText(judge, jFont, jMax);
@@ -2654,7 +2654,7 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
         const blockH = kwLH + gapKJ + jLines.length * jLH + gapJC + chipH;
         Object.assign(n, { w: LEAD + blockW + 2, h: blockH, kwFont, jFont, chFont, kwLH, jLH, chipH, gapKJ, gapJC, jLines, chap, chW, kind: 'dual' }); return;
       }
-      // 三/四级:类型靠 emoji 前缀区分,浅色文字纯挂线
+      // 三/四级：类型靠 emoji 前缀区分，浅色文字纯挂线
       let font, color, maxW, lh;
       if (d === 3) { font = '400 13px ' + SANS; color = C.ink2; maxW = 214; lh = 19; }
       else { font = '400 12px ' + SANS; color = C.ink3; maxW = 198; lh = 17.5; }
@@ -2670,9 +2670,9 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
     const HGAP = 16, colW = [], colX = [];
     for (let d = 0; d <= maxDepth; d++) colW[d] = Math.max(...byDepth[d].map(n => n.w));
     colX[0] = 0; for (let d = 1; d <= maxDepth; d++) colX[d] = colX[d - 1] + colW[d - 1] + HGAP;
-    // 竖向 tidy 布局:后序 y 游标(变高不重叠),父居子中点
+    // 竖向 tidy 布局：后序 y 游标（变高不重叠），父居子中点
     const VGAP = 10;
-    // 竖向布局:slot 高 = max(自身块高, 子树高) -> 兄弟永不重叠;父节点在 slot 内居中,子树整体居中
+    // 竖向布局：slot 高 = max（自身块高， 子树高） -> 兄弟永不重叠；父节点在 slot 内居中，子树整体居中
     (function measureSub(n){
       if (!n.children.length) { n.subH = n.h; return n.subH; }
       let total = 0;
@@ -2702,7 +2702,7 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
     const X = n => n.x + offX, Y = n => n.top + offY, CY = n => n.cy + offY;
     const parts = [];
     parts.push('<svg xmlns="' + SVGNS + '" width="' + W.toFixed(0) + '" height="' + H.toFixed(0) + '" viewBox="0 0 ' + W.toFixed(0) + ' ' + H.toFixed(0) + '" font-family=\'' + SANS.replace(/"/g, '&quot;') + '\'>');
-    // 父子直角肘形梳齿引线(只画父子,SVG 版不画任何跨枝关联)
+    // 父子直角肘形梳齿引线（只画父子，SVG 版不画任何跨枝关联）
     const conn = [];
     Object.values(byDepth).flat().forEach(n => {
       if (!n.children.length) return;
@@ -2744,13 +2744,13 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
     stage.innerHTML = parts.join('');
     const svgEl = stage.querySelector('svg');
 
-    // ===== viewBox pan / zoom viewer(每次浏览器重新矢量光栅化,任意倍率锐利;非 transform:scale 位图放大糊) =====
+    // ===== viewBox pan / zoom viewer（每次浏览器重新矢量光栅化，任意倍率锐利；非 transform:scale 位图放大糊） =====
     const zb = vp.querySelector('.mm-zoom');
     let stt = { x: 0, y: 0, k: 1 };
     function apply(){ const r = vp.getBoundingClientRect(); if (!r.width || !r.height) return; svgEl.setAttribute('width', r.width); svgEl.setAttribute('height', r.height); svgEl.setAttribute('viewBox', (-stt.x / stt.k).toFixed(2) + ' ' + (-stt.y / stt.k).toFixed(2) + ' ' + (r.width / stt.k).toFixed(2) + ' ' + (r.height / stt.k).toFixed(2)); if (zb) zb.textContent = Math.round(stt.k * 100) + '%'; }
     function fit(pad){
       pad = (pad === undefined) ? 20 : pad;
-      // 容器高度按内容比例自适应(上限 1100px):竖高的双层节点树不再被 fit 压成缩略图(文字 <8px 不可读)
+      // 容器高度按内容比例自适应（上限 1100px)：竖高的双层节点树不再被 fit 压成缩略图（文字 <8px 不可读）
       if (!wrap.classList.contains('mm-fullscreen')) {
         const w0 = vp.getBoundingClientRect().width;
         if (w0) {
@@ -2782,7 +2782,7 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
     function up(e){ pts.delete(e.pointerId); if (pts.size < 2) pinchStart = null; if (pts.size === 0) { vp.classList.remove('grabbing'); captured = false; } }
     vp.addEventListener('pointerup', up); vp.addEventListener('pointercancel', up);
     vp.addEventListener('dblclick', () => fit());
-    // 章码跳章:点二级 a.jump -> location.hash -> 复用 initHashRouter(切 panel-full + 展开该章 + 高亮);拖动中不触发
+    // 章码跳章：点二级 a.jump -> location.hash -> 复用 initHashRouter（切 panel-full + 展开该章 + 高亮）；拖动中不触发
     stage.addEventListener('click', e => {
       const a = e.target.closest && e.target.closest('a.jump'); if (!a) return;
       e.preventDefault(); if (dragMoved) return;
@@ -2796,8 +2796,8 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
     if (btn('out')) btn('out').onclick = () => { const r = vp.getBoundingClientRect(); zoomAt(r.left + r.width / 2, r.top + r.height / 2, 1 / 1.25); };
     if (btn('fit')) btn('fit').onclick = () => fit();
     const fsBtn = btn('fs');
-    // 全屏 = 把 wrap 临时移到 <body> 顶层再加 .mm-fullscreen(逃离 main{isolation:isolate} / panel{transform} 的祖先 stacking context,
-    // 否则 fixed 也困在 main 内、被 sticky nav / 主题浮层盖住,进不了纯深色聚焦态)。退出时复位回原处。
+    // 全屏 = 把 wrap 临时移到 <body> 顶层再加 .mm-fullscreen（逃离 main{isolation:isolate} / panel{transform} 的祖先 stacking context,
+    // 否则 fixed 也困在 main 内、被 sticky nav / 主题浮层盖住，进不了纯深色聚焦态）。退出时复位回原处。
     let fsSlot = null, fsHome = null;
     function toggleFs(){
       const on = !wrap.classList.contains('mm-fullscreen');
@@ -2822,12 +2822,12 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
     function showHint(){ if (!hintEl) return; const touch = matchMedia('(pointer:coarse)').matches || ('ontouchstart' in window) || navigator.maxTouchPoints > 0; hintEl.textContent = touch ? '双指缩放 · 单指拖动 · 双击复位' : '滚轮缩放 · 拖动平移 · 双击复位 · 点二级章码跳章'; hintEl.classList.add('show'); clearTimeout(hintTimer); hintTimer = setTimeout(hideHint, 4200); }
     function hideHint(){ if (hintEl) hintEl.classList.remove('show'); }
     function toast(msg){ if (!toastEl) return; toastEl.textContent = msg; toastEl.classList.add('show'); clearTimeout(toastTimer); toastTimer = setTimeout(() => toastEl.classList.remove('show'), 2000); }
-    // 换肤 no-op:脑图恒深色,不随页面主题(保留全局符号,initThemes 调用安全)
+    // 换肤 no-op：脑图恒深色，不随页面主题（保留全局符号，initThemes 调用安全）
     window.__bdMindmapRetheme = function(){};
-    // 诊断(供 verify 冒烟:节点数 / 是否 SVG viewer)
+    // 诊断（供 verify 冒烟：节点数 / 是否 SVG viewer)
     const allNodes = Object.values(byDepth).flat();
     window.__mm = { W: W, H: H, nodes: allNodes.length, maxDepth: maxDepth, fit: fit, setView: (x, y, k) => { stt.x = x; stt.y = y; stt.k = k; apply(); } };
-    // 懒渲染:panel 隐藏(getBoundingClientRect 为 0)时等切到①再 fit
+    // 懒渲染：panel 隐藏（getBoundingClientRect 为 0）时等切到①再 fit
     let inited = false;
     function ready(){ if (inited) return; const r = vp.getBoundingClientRect(); if (!r.width || !r.height) return; inited = true; fit(); showHint(); }
     ready();
@@ -2836,7 +2836,7 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
     document.querySelectorAll('.tab').forEach(t => t.addEventListener('click', () => { if (t.dataset.panel === 'panel-glance') setTimeout(() => { ready(); if (inited) fit(); }, 60); }));
   }
   function initHashRouter(activateTab){
-    /* hash 路由: #sub-* → 开合全屏子视图;#ch-N → 章码传送门(切板块② + 展开该章 + 滚动 + 高亮);其余 #id → 切 tab + 滚动高亮。 */
+    /* hash 路由： #sub-* → 开合全屏子视图；#ch-N → 章码传送门（切板块② + 展开该章 + 滚动 + 高亮）；其余 #id → 切 tab + 滚动高亮。 */
     const subpages = Array.prototype.slice.call(document.querySelectorAll('.subpage'));
     const closeSubs = () => subpages.forEach(s => { s.hidden = true; });
     const open = () => {
@@ -2868,10 +2868,10 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
 })();
 </script>
 <script>
-/* 基础层: IIFE 壳 + 幂等守卫 + 全部 v3 交互
-   initNav(tab/next-cta,切板滚到悬浮 tab 下方) / syncTabH(实测 tab 栏高→--tab-h) / initThemes / initChapters(手风琴多开+全展逃生门+已读计数)
-   / initCoreIdeas(展开三件) / initConcepts(弹卡+高亮章行) / initTensions / initModels(抽屉单开)
-   / initRules(chip 筛选 + chain-step 联动) / initReadingPath(高亮书卡) / initSubBack */
+/* 基础层： IIFE 壳 + 幂等守卫 + 全部 v3 交互
+   initNav(tab/next-cta，切板滚到悬浮 tab 下方） / syncTabH（实测 tab 栏高→--tab-h) / initThemes / initChapters（手风琴多开+全展逃生门+已读计数）
+   / initCoreIdeas（展开三件） / initConcepts（弹卡+高亮章行） / initTensions / initModels（抽屉单开）
+   / initRules(chip 筛选 + chain-step 联动） / initReadingPath（高亮书卡） / initSubBack */
 (() => {
   'use strict';
   const $  = (s, r) => (r || document).querySelector(s);
@@ -2883,13 +2883,13 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
     $$('.tab').forEach(t => {
       const on = t.dataset.panel === panelId;
       t.classList.toggle('on', on);
-      /* Q7-6:移动端横滑单行 tab 栏,激活 tab 自动居中(桌面 grid 无横向溢出,无副作用) */
+      /* Q7-6：移动端横滑单行 tab 栏，激活 tab 自动居中（桌面 grid 无横向溢出，无副作用） */
       if (on && t.scrollIntoView) { try { t.scrollIntoView({ inline: 'center', block: 'nearest' }); } catch (e) {} }
     });
   }
   function tabBarH(){ const n = document.getElementById('bd-tabs'); return n ? n.getBoundingClientRect().height : 0; }
   function syncTabH(){ document.documentElement.style.setProperty('--tab-h', tabBarH() + 'px'); }
-  /* 切板 / 跳章后把目标顶部滚到 sticky tab 栏正下方(减去实测 tab 栏高度,不写死;scroll-margin-top 走 --tab-h) */
+  /* 切板 / 跳章后把目标顶部滚到 sticky tab 栏正下方（减去实测 tab 栏高度，不写死；scroll-margin-top 走 --tab-h) */
   function scrollPanelTop(panelId){
     const panel = document.getElementById(panelId);
     if (!panel) return;
@@ -2897,7 +2897,7 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
     window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
   }
 
-  /* 导航: tab + next-cta + 末行指路回链 全走 data-panel;切板后统一把内容落到悬浮 tab 正下方(导读条 .reading-guide 已废) */
+  /* 导航： tab + next-cta + 末行指路回链 全走 data-panel；切板后统一把内容落到悬浮 tab 正下方（导读条 .reading-guide 已废） */
   function initNav(){
     $$('[data-panel]').forEach(el => el.addEventListener('click', (e) => {
       if (el.tagName === 'A') e.preventDefault();
@@ -2934,7 +2934,7 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
     markCurrent();
   }
 
-  /* ② 手风琴章节 + 目录态(v4 批次C:已读改章尾 IntersectionObserver 计数 + localStorage 持久;下一章预告卡;阅读中上下文条) */
+  /* ② 手风琴章节 + 目录态（v4 批次C：已读改章尾 IntersectionObserver 计数 + localStorage 持久；下一章预告卡；阅读中上下文条） */
   const read = new Set();
   function chTotal(){ return $$('.bd-chapter').length; }
   function updateProgress(){
@@ -2945,7 +2945,7 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
     if (cx) cx.textContent = '已读 ' + read.size + '/' + total;
   }
   function persistRead(){ try { localStorage.setItem(lsKey('read'), JSON.stringify(Array.from(read))); } catch (e) {} }
-  function loadRead(){   // Q5-3B:回访恢复已读(key 带 slug)
+  function loadRead(){   // Q5-3B：回访恢复已读（key 带 slug)
     try {
       const arr = JSON.parse(localStorage.getItem(lsKey('read')) || '[]');
       if (Array.isArray(arr)) arr.forEach(n => {
@@ -2955,14 +2955,14 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
       });
     } catch (e) {}
   }
-  function markRead(n){   // Q5-3:读到章尾入视口才计已读(非「点开即计」)
+  function markRead(n){   // Q5-3：读到章尾入视口才计已读（非「点开即计」)
     n = String(n);
     if (read.has(n)) return;
     read.add(n);
     const r = $('.toc-row[data-ch="' + n + '"]'); if (r) r.classList.add('read');
     persistRead(); updateProgress();
   }
-  function setChapter(n, openState){   // Q5-3:只管展开/收起,不再碰已读
+  function setChapter(n, openState){   // Q5-3：只管展开/收起，不再碰已读
     const ch = document.getElementById('ch-' + n);
     const row = $('.toc-row[data-ch="' + n + '"]');
     if (!ch) return;
@@ -2979,7 +2979,7 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
   }
   window.__bdOpenChapter = openChapter;
 
-  /* Q5-2:章尾裸钮 → 下一章预告卡(读 toc 论点标题 + 读时,JS 读 DOM);末章补终局卡跳 panel-judge */
+  /* Q5-2：章尾裸钮 → 下一章预告卡（读 toc 论点标题 + 读时，JS 读 DOM)；末章补终局卡跳 panel-judge */
   function initChapterPreview(){
     $$('.bd-chapter').forEach(ch => {
       const n = ch.id.replace('ch-', '');
@@ -3005,7 +3005,7 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
         b.className = 'ch-act ch-next ch-final';
         b.setAttribute('data-panel', 'panel-judge');
         const k = document.createElement('span'); k.className = 'cn-kick'; k.textContent = '全书读完 ✓';
-        const t = document.createElement('span'); t.className = 'cn-title'; t.textContent = '这书该信几分?';
+        const t = document.createElement('span'); t.className = 'cn-title'; t.textContent = '这书该信几分？';
         const m = document.createElement('span'); m.className = 'cn-meta'; m.textContent = '→ 批判与评价';
         b.appendChild(k); b.appendChild(t); b.appendChild(m);
         acts.appendChild(b);
@@ -3019,10 +3019,10 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
       const ch = document.getElementById('ch-' + n);
       const willOpen = !(ch && ch.classList.contains('open'));
       setChapter(n, willOpen);
-      if (willOpen && ch) ch.scrollIntoView({ behavior: 'smooth', block: 'start' });   // Q5-8:平滑滚到章首,落 tab 下沿(scroll-margin-top)
+      if (willOpen && ch) ch.scrollIntoView({ behavior: 'smooth', block: 'start' });   // Q5-8：平滑滚到章首，落 tab 下沿（scroll-margin-top)
     }));
     const btn = $('.toc-expand');
-    if (btn) btn.addEventListener('click', () => {   // Q5-3:全部展开只展开、不计已读
+    if (btn) btn.addEventListener('click', () => {   // Q5-3：全部展开只展开、不计已读
       const chs = $$('.bd-chapter');
       const anyClosed = chs.some(c => !c.classList.contains('open'));
       chs.forEach(c => setChapter(c.id.replace('ch-', ''), anyClosed));
@@ -3035,14 +3035,14 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
       if (collapse) { setChapter(collapse.dataset.chCollapse, false); }
       else if (totoc) { const t = $('.chapter-toc'); if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
       else if (next) { e.preventDefault(); const cur = next.dataset.chNext; setChapter(cur, false); openChapter(String(Number(cur) + 1), true); }
-      // .ch-final 终局卡走 data-panel="panel-judge",由 initNav 委托切板,不在此拦截
+      // .ch-final 终局卡走 data-panel="panel-judge"，由 initNav 委托切板，不在此拦截
     }));
     initChapterPreview();
     loadRead();
     updateProgress();
   }
 
-  /* Q5-3/Q5-4:章尾入视口才计已读(IO)+ 阅读中上下文条(当前章 · 已读 n/N · 回目录),离开正文自动隐藏 */
+  /* Q5-3/Q5-4：章尾入视口才计已读（IO)+ 阅读中上下文条（当前章 · 已读 n/N · 回目录），离开正文自动隐藏 */
   function initReadingObservers(){
     if (!('IntersectionObserver' in window)) return;
     const endOb = new IntersectionObserver((ents) => {
@@ -3074,7 +3074,7 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
     $$('.bd-chapter').forEach(c => bodyOb.observe(c));
   }
 
-  /* ① 核心观点卡: 点卡展开三件(explain+evidence+evlevel);内部传送门链不触发折叠;Q7-3 展开后翻文案 */
+  /* ① 核心观点卡： 点卡展开三件（explain+evidence+evlevel)；内部传送门链不触发折叠；Q7-3 展开后翻文案 */
   function initCoreIdeas(){
     $$('.ci').forEach(card => card.addEventListener('click', (e) => {
       if (e.target.closest('a')) return;
@@ -3087,7 +3087,7 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
     }));
   }
 
-  /* ② 概念 chip: 弹卡(单开)+ 高亮含该概念的目录行 */
+  /* ② 概念 chip: 弹卡（单开）+ 高亮含该概念的目录行 */
   function initConcepts(){
     const chips = $$('.cc-chip');
     chips.forEach(chip => chip.addEventListener('click', () => {
@@ -3102,12 +3102,12 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
     }));
   }
 
-  /* ③ 内在张力: 点行展开仲裁 note */
+  /* ③ 内在张力： 点行展开仲裁 note */
   function initTensions(){
     $$('.tn-row').forEach(row => row.addEventListener('click', () => row.classList.toggle('open')));
   }
 
-  /* ④ 模型抽屉: 一次开一张(手风琴);Q7-3 展开后翻文案 展开 ▾ ⇄ 收起 ▴ */
+  /* ④ 模型抽屉： 一次开一张（手风琴）;Q7-3 展开后翻文案 展开 ▾ ⇄ 收起 ▴ */
   function syncModelToggle(d){
     const t = d.querySelector('.md-toggle');
     if (t) t.textContent = d.classList.contains('open') ? '收起 ▴' : '展开 ▾';
@@ -3126,7 +3126,7 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
     });
   }
 
-  /* ④ 情境决策卡: rule-chips 双轴筛选 + chain-step 点击联动筛选并滚动 */
+  /* ④ 情境决策卡： rule-chips 双轴筛选 + chain-step 点击联动筛选并滚动 */
   function initRules(){
     let curStep = 'all', curSitu = 'all';
     const cards = $$('.rule-card');
@@ -3157,7 +3157,7 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
     apply();
   }
 
-  /* ⑤ 阅读路径: 点路径步高亮对应书卡 */
+  /* ⑤ 阅读路径： 点路径步高亮对应书卡 */
   function initReadingPath(){
     $$('.rp-step').forEach(step => step.addEventListener('click', () => {
       const t = step.dataset.simIdx;
@@ -3167,7 +3167,7 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
     }));
   }
 
-  /* 子视图返回: history.back() 优先;直达深链兜底清 hash */
+  /* 子视图返回： history.back() 优先；直达深链兜底清 hash */
   function initSubBack(){
     $$('[data-sub-back]').forEach(b => b.addEventListener('click', () => {
       if (location.hash.indexOf('#sub-') === 0 && window.history.length > 1) window.history.back();
@@ -3175,7 +3175,7 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
     }));
   }
 
-  /* Q7-5:sticky tab 吸顶阴影 -- sentinel 滚出视口(IO 不相交)即 .stuck,吸顶瞬间浮起(iOS 质感) */
+  /* Q7-5:sticky tab 吸顶阴影 -- sentinel 滚出视口（IO 不相交）即 .stuck，吸顶瞬间浮起（iOS 质感） */
   function initStickyShadow(){
     const tabs = document.getElementById('bd-tabs');
     if (!tabs || !('IntersectionObserver' in window)) return;
@@ -3190,7 +3190,7 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
     const m = document.querySelector('main[data-book-slug]');
     if (!m || m.dataset.bdReady) return;
     m.dataset.bdReady = '1';
-    /* initChapters 先跑:它注入末章 .ch-final[data-panel](Q5-2 终局卡),initNav 再统一委托绑 data-panel */
+    /* initChapters 先跑：它注入末章 .ch-final[data-panel](Q5-2 终局卡）,initNav 再统一委托绑 data-panel */
     initChapters(); initNav(); initThemes(); initCoreIdeas(); initConcepts();
     initTensions(); initModels(); initRules(); initReadingPath(); initSubBack();
     initReadingObservers(); initStickyShadow();
